@@ -1,0 +1,174 @@
+logger=licensing t=2023-01-05T09:18:46.261697+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2023-01-05T09:18:46.263695+01:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\Program Files\\GrafanaLabs\\grafana\\data\\license.jwt"
+logger=cleanup t=2023-01-05T09:18:46.2826953+01:00 level=info msg="Completed cleanup jobs" duration=98.266ms
+logger=server t=2023-01-05T09:24:23.6977416+01:00 level=info msg="Shutdown started" reason="System signal: terminated"
+logger=tracing t=2023-01-05T09:24:23.6982697+01:00 level=info msg="Closing tracing"
+logger=ticker t=2023-01-05T09:24:23.6982697+01:00 level=info msg=stopped last_tick=2023-01-05T09:24:20+01:00
+logger=settings t=2023-01-05T09:38:02.5423946+01:00 level=info msg="Starting Grafana" version=9.3.2 commit=21c1d14e91 branch=HEAD compiled=2022-12-14T11:40:18+01:00
+logger=settings t=2023-01-05T09:38:02.543894+01:00 level=info msg="Config loaded from" file="C:\\Program Files\\GrafanaLabs\\grafana/conf/defaults.ini"
+logger=settings t=2023-01-05T09:38:02.543894+01:00 level=info msg="Path Home" path="C:\\Program Files\\GrafanaLabs\\grafana"
+logger=settings t=2023-01-05T09:38:02.543894+01:00 level=info msg="Path Data" path="C:\\Program Files\\GrafanaLabs\\grafana\\data"
+logger=settings t=2023-01-05T09:38:02.543894+01:00 level=info msg="Path Logs" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\log"
+logger=settings t=2023-01-05T09:38:02.543894+01:00 level=info msg="Path Plugins" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=settings t=2023-01-05T09:38:02.543894+01:00 level=info msg="Path Provisioning" path="C:\\Program Files\\GrafanaLabs\\grafana\\conf\\provisioning"
+logger=settings t=2023-01-05T09:38:02.543894+01:00 level=info msg="App mode production"
+logger=sqlstore t=2023-01-05T09:38:02.5448937+01:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2023-01-05T09:38:02.5453971+01:00 level=warn msg="SQLite database file has broader permissions than it should" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\grafana.db" mode=-rw-rw-rw- expected=-rw-r-----
+logger=migrator t=2023-01-05T09:38:02.594016+01:00 level=info msg="Starting DB migrations"
+logger=migrator t=2023-01-05T09:38:02.6035408+01:00 level=info msg="migrations completed" performed=0 skipped=551 duration=1.0008ms
+logger=licensing t=2023-01-05T09:38:02.6057382+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=plugin.loader t=2023-01-05T09:38:02.8049437+01:00 level=info msg="Plugin registered" pluginID=input
+logger=plugin.finder t=2023-01-05T09:38:02.8049437+01:00 level=warn msg="Skipping finding plugins as directory does not exist" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=secrets t=2023-01-05T09:38:02.8054459+01:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=query_data t=2023-01-05T09:38:02.8180088+01:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2023-01-05T09:38:02.8290499+01:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2023-01-05T09:38:03.1440987+01:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2023-01-05T09:38:03.1474843+01:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2023-01-05T09:38:03.1474843+01:00 level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2023-01-05T09:38:03.1474843+01:00 level=info msg="storage starting"
+logger=report t=2023-01-05T09:38:03.1484965+01:00 level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2023-01-05T09:38:03.1484965+01:00 level=info msg="Warming state cache for startup"
+logger=http.server t=2023-01-05T09:38:03.1585607+01:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2023-01-05T09:38:03.1807892+01:00 level=info msg="State cache has been initialized" states=0 duration=32.2927ms
+logger=ngalert.multiorg.alertmanager t=2023-01-05T09:38:03.1807892+01:00 level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2023-01-05T09:38:03.1807892+01:00 level=info msg=starting first_tick=2023-01-05T09:38:10+01:00
+logger=server t=2023-01-05T09:39:35.0158124+01:00 level=info msg="Shutdown started" reason="System signal: terminated"
+logger=ticker t=2023-01-05T09:39:35.0158124+01:00 level=info msg=stopped last_tick=2023-01-05T09:39:30+01:00
+logger=tracing t=2023-01-05T09:39:35.0158124+01:00 level=info msg="Closing tracing"
+logger=settings t=2023-01-05T09:43:19.0594757+01:00 level=info msg="Starting Grafana" version=9.3.2 commit=21c1d14e91 branch=HEAD compiled=2022-12-14T11:40:18+01:00
+logger=settings t=2023-01-05T09:43:19.0615181+01:00 level=info msg="Config loaded from" file="C:\\Program Files\\GrafanaLabs\\grafana/conf/defaults.ini"
+logger=settings t=2023-01-05T09:43:19.0620161+01:00 level=info msg="Path Home" path="C:\\Program Files\\GrafanaLabs\\grafana"
+logger=settings t=2023-01-05T09:43:19.0620161+01:00 level=info msg="Path Data" path="C:\\Program Files\\GrafanaLabs\\grafana\\data"
+logger=settings t=2023-01-05T09:43:19.0620161+01:00 level=info msg="Path Logs" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\log"
+logger=settings t=2023-01-05T09:43:19.0620161+01:00 level=info msg="Path Plugins" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=settings t=2023-01-05T09:43:19.0620161+01:00 level=info msg="Path Provisioning" path="C:\\Program Files\\GrafanaLabs\\grafana\\conf\\provisioning"
+logger=settings t=2023-01-05T09:43:19.0620161+01:00 level=info msg="App mode production"
+logger=sqlstore t=2023-01-05T09:43:19.0635104+01:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2023-01-05T09:43:19.0645296+01:00 level=warn msg="SQLite database file has broader permissions than it should" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\grafana.db" mode=-rw-rw-rw- expected=-rw-r-----
+logger=migrator t=2023-01-05T09:43:19.1650757+01:00 level=info msg="Starting DB migrations"
+logger=migrator t=2023-01-05T09:43:19.1771478+01:00 level=info msg="migrations completed" performed=0 skipped=551 duration=1.0002ms
+logger=licensing t=2023-01-05T09:43:19.1847563+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=plugin.loader t=2023-01-05T09:43:19.7648069+01:00 level=info msg="Plugin registered" pluginID=input
+logger=plugin.finder t=2023-01-05T09:43:19.7653087+01:00 level=warn msg="Skipping finding plugins as directory does not exist" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=secrets t=2023-01-05T09:43:19.7663067+01:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=query_data t=2023-01-05T09:43:19.7919435+01:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2023-01-05T09:43:19.8250873+01:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2023-01-05T09:43:20.2446569+01:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2023-01-05T09:43:20.2481587+01:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2023-01-05T09:43:20.2481587+01:00 level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2023-01-05T09:43:20.2491599+01:00 level=info msg="storage starting"
+logger=report t=2023-01-05T09:43:20.2491599+01:00 level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2023-01-05T09:43:20.2486588+01:00 level=info msg="Warming state cache for startup"
+logger=http.server t=2023-01-05T09:43:20.2601862+01:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2023-01-05T09:43:20.2745642+01:00 level=info msg="State cache has been initialized" states=0 duration=25.9054ms
+logger=ngalert.multiorg.alertmanager t=2023-01-05T09:43:20.2746202+01:00 level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2023-01-05T09:43:20.2746202+01:00 level=info msg=starting first_tick=2023-01-05T09:43:30+01:00
+logger=server t=2023-01-05T09:47:50.8920305+01:00 level=info msg="Shutdown started" reason="System signal: terminated"
+logger=tracing t=2023-01-05T09:47:50.8920305+01:00 level=info msg="Closing tracing"
+logger=ticker t=2023-01-05T09:47:50.8920305+01:00 level=info msg=stopped last_tick=2023-01-05T09:47:50+01:00
+logger=settings t=2023-01-05T09:48:15.1960532+01:00 level=info msg="Starting Grafana" version=9.3.2 commit=21c1d14e91 branch=HEAD compiled=2022-12-14T11:40:18+01:00
+logger=settings t=2023-01-05T09:48:15.1980197+01:00 level=info msg="Config loaded from" file="C:\\Program Files\\GrafanaLabs\\grafana/conf/defaults.ini"
+logger=settings t=2023-01-05T09:48:15.1980197+01:00 level=info msg="Path Home" path="C:\\Program Files\\GrafanaLabs\\grafana"
+logger=settings t=2023-01-05T09:48:15.1980197+01:00 level=info msg="Path Data" path="C:\\Program Files\\GrafanaLabs\\grafana\\data"
+logger=settings t=2023-01-05T09:48:15.1980197+01:00 level=info msg="Path Logs" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\log"
+logger=settings t=2023-01-05T09:48:15.1980197+01:00 level=info msg="Path Plugins" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=settings t=2023-01-05T09:48:15.1980197+01:00 level=info msg="Path Provisioning" path="C:\\Program Files\\GrafanaLabs\\grafana\\conf\\provisioning"
+logger=settings t=2023-01-05T09:48:15.1980197+01:00 level=info msg="App mode production"
+logger=sqlstore t=2023-01-05T09:48:15.2000197+01:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2023-01-05T09:48:15.2000197+01:00 level=warn msg="SQLite database file has broader permissions than it should" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\grafana.db" mode=-rw-rw-rw- expected=-rw-r-----
+logger=migrator t=2023-01-05T09:48:15.353853+01:00 level=info msg="Starting DB migrations"
+logger=migrator t=2023-01-05T09:48:15.3640108+01:00 level=info msg="migrations completed" performed=0 skipped=551 duration=2.1141ms
+logger=licensing t=2023-01-05T09:48:15.3741463+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=plugin.loader t=2023-01-05T09:48:15.9454579+01:00 level=info msg="Plugin registered" pluginID=input
+logger=plugin.finder t=2023-01-05T09:48:15.9454579+01:00 level=warn msg="Skipping finding plugins as directory does not exist" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=secrets t=2023-01-05T09:48:15.9469566+01:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=query_data t=2023-01-05T09:48:15.9599779+01:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2023-01-05T09:48:15.9709746+01:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2023-01-05T09:48:16.3027684+01:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2023-01-05T09:48:16.3082667+01:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2023-01-05T09:48:16.3082667+01:00 level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2023-01-05T09:48:16.3097668+01:00 level=info msg="storage starting"
+logger=report t=2023-01-05T09:48:16.3097668+01:00 level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2023-01-05T09:48:16.3097668+01:00 level=info msg="Warming state cache for startup"
+logger=http.server t=2023-01-05T09:48:16.3198283+01:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2023-01-05T09:48:16.3435413+01:00 level=info msg="State cache has been initialized" states=0 duration=33.7745ms
+logger=ngalert.multiorg.alertmanager t=2023-01-05T09:48:16.3435413+01:00 level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2023-01-05T09:48:16.3435413+01:00 level=info msg=starting first_tick=2023-01-05T09:48:20+01:00
+logger=cleanup t=2023-01-05T09:58:16.3239271+01:00 level=info msg="Completed cleanup jobs" duration=13.989ms
+logger=cleanup t=2023-01-05T10:08:16.3193773+01:00 level=info msg="Completed cleanup jobs" duration=8.6843ms
+logger=cleanup t=2023-01-05T10:18:16.4458435+01:00 level=info msg="Completed cleanup jobs" duration=9.4913ms
+logger=context userId=1 orgId=1 uname=admin t=2023-01-05T10:19:21.0973595+01:00 level=info msg="Request Completed" method=GET path=/login status=302 remote_addr=[::1] time_ms=21 duration=21.0021ms size=24 referer= handler=/login
+logger=context userId=1 orgId=1 uname=admin t=2023-01-05T10:19:22.1511138+01:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=1 duration=1.5214ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2023-01-05T10:28:16.5682412+01:00 level=info msg="Completed cleanup jobs" duration=9.8884ms
+logger=cleanup t=2023-01-05T10:38:16.6606521+01:00 level=info msg="Completed cleanup jobs" duration=8.9177ms
+logger=licensing t=2023-01-05T10:48:16.7314542+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2023-01-05T10:48:16.7319538+01:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\Program Files\\GrafanaLabs\\grafana\\data\\license.jwt"
+logger=cleanup t=2023-01-05T10:48:16.747454+01:00 level=info msg="Completed cleanup jobs" duration=16.5ms
+logger=cleanup t=2023-01-05T10:58:16.8064576+01:00 level=info msg="Completed cleanup jobs" duration=8.995ms
+logger=server t=2023-01-05T11:02:10.6974711+01:00 level=info msg="Shutdown started" reason="System signal: terminated"
+logger=ticker t=2023-01-05T11:02:10.6974711+01:00 level=info msg=stopped last_tick=2023-01-05T11:02:10+01:00
+logger=tracing t=2023-01-05T11:02:10.6977574+01:00 level=info msg="Closing tracing"
+logger=settings t=2023-01-05T11:02:38.7883946+01:00 level=info msg="Starting Grafana" version=9.3.2 commit=21c1d14e91 branch=HEAD compiled=2022-12-14T11:40:18+01:00
+logger=settings t=2023-01-05T11:02:38.7898917+01:00 level=info msg="Config loaded from" file="C:\\Program Files\\GrafanaLabs\\grafana/conf/defaults.ini"
+logger=settings t=2023-01-05T11:02:38.7898917+01:00 level=info msg="Path Home" path="C:\\Program Files\\GrafanaLabs\\grafana"
+logger=settings t=2023-01-05T11:02:38.7904103+01:00 level=info msg="Path Data" path="C:\\Program Files\\GrafanaLabs\\grafana\\data"
+logger=settings t=2023-01-05T11:02:38.7904103+01:00 level=info msg="Path Logs" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\log"
+logger=settings t=2023-01-05T11:02:38.7904103+01:00 level=info msg="Path Plugins" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=settings t=2023-01-05T11:02:38.7904103+01:00 level=info msg="Path Provisioning" path="C:\\Program Files\\GrafanaLabs\\grafana\\conf\\provisioning"
+logger=settings t=2023-01-05T11:02:38.7904103+01:00 level=info msg="App mode production"
+logger=sqlstore t=2023-01-05T11:02:38.793502+01:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2023-01-05T11:02:38.7940483+01:00 level=warn msg="SQLite database file has broader permissions than it should" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\grafana.db" mode=-rw-rw-rw- expected=-rw-r-----
+logger=migrator t=2023-01-05T11:02:38.8912847+01:00 level=info msg="Starting DB migrations"
+logger=migrator t=2023-01-05T11:02:38.9038647+01:00 level=info msg="migrations completed" performed=0 skipped=551 duration=1.5305ms
+logger=licensing t=2023-01-05T11:02:38.9123954+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=plugin.loader t=2023-01-05T11:02:39.2696025+01:00 level=info msg="Plugin registered" pluginID=input
+logger=plugin.finder t=2023-01-05T11:02:39.2696025+01:00 level=warn msg="Skipping finding plugins as directory does not exist" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=secrets t=2023-01-05T11:02:39.2721052+01:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=query_data t=2023-01-05T11:02:39.2991777+01:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2023-01-05T11:02:39.3137534+01:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2023-01-05T11:02:39.6570291+01:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2023-01-05T11:02:39.6615824+01:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2023-01-05T11:02:39.6615824+01:00 level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2023-01-05T11:02:39.662572+01:00 level=info msg="storage starting"
+logger=report t=2023-01-05T11:02:39.662572+01:00 level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2023-01-05T11:02:39.662572+01:00 level=info msg="Warming state cache for startup"
+logger=http.server t=2023-01-05T11:02:39.6761776+01:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2023-01-05T11:02:39.6862305+01:00 level=info msg="State cache has been initialized" states=0 duration=23.6585ms
+logger=ticker t=2023-01-05T11:02:39.6862305+01:00 level=info msg=starting first_tick=2023-01-05T11:02:40+01:00
+logger=ngalert.multiorg.alertmanager t=2023-01-05T11:02:39.6862305+01:00 level=info msg="starting MultiOrg Alertmanager"
+logger=cleanup t=2023-01-05T11:12:39.6772675+01:00 level=info msg="Completed cleanup jobs" duration=14.5328ms
+logger=cleanup t=2023-01-05T11:22:39.6767985+01:00 level=info msg="Completed cleanup jobs" duration=13.4486ms
+logger=cleanup t=2023-01-05T11:32:39.6751862+01:00 level=info msg="Completed cleanup jobs" duration=11.4638ms
+logger=cleanup t=2023-01-05T11:42:39.6730406+01:00 level=info msg="Completed cleanup jobs" duration=9.9013ms
+logger=cleanup t=2023-01-05T11:52:39.6718919+01:00 level=info msg="Completed cleanup jobs" duration=9.0016ms
+logger=cleanup t=2023-01-05T12:02:39.6761511+01:00 level=info msg="Completed cleanup jobs" duration=13.5636ms
+logger=licensing t=2023-01-05T12:02:39.6766498+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2023-01-05T12:02:39.6772185+01:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\Program Files\\GrafanaLabs\\grafana\\data\\license.jwt"
+logger=licensing t=2023-01-05T13:40:13.0160213+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2023-01-05T13:40:13.0160213+01:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\Program Files\\GrafanaLabs\\grafana\\data\\license.jwt"
+logger=cleanup t=2023-01-05T13:40:13.0515466+01:00 level=info msg="Completed cleanup jobs" duration=36.5283ms
+logger=cleanup t=2023-01-05T13:42:39.6644824+01:00 level=info msg="Completed cleanup jobs" duration=1.5036ms
+logger=cleanup t=2023-01-05T13:52:39.6716357+01:00 level=info msg="Completed cleanup jobs" duration=8.2969ms
+logger=licensing t=2023-01-05T14:02:39.6694609+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2023-01-05T14:02:39.6694609+01:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\Program Files\\GrafanaLabs\\grafana\\data\\license.jwt"
+logger=cleanup t=2023-01-05T14:02:39.6784647+01:00 level=info msg="Completed cleanup jobs" duration=14.9978ms
+logger=cleanup t=2023-01-05T14:12:39.675136+01:00 level=info msg="Completed cleanup jobs" duration=12.5011ms
+logger=cleanup t=2023-01-05T14:22:39.6717935+01:00 level=info msg="Completed cleanup jobs" duration=9.1069ms
+logger=cleanup t=2023-01-05T14:32:39.6708461+01:00 level=info msg="Completed cleanup jobs" duration=7.9336ms
+logger=cleanup t=2023-01-05T14:42:39.6695907+01:00 level=info msg="Completed cleanup jobs" duration=6.5146ms
+logger=cleanup t=2023-01-05T14:52:39.6683014+01:00 level=info msg="Completed cleanup jobs" duration=5.5106ms
+logger=licensing t=2023-01-05T15:02:39.6720715+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2023-01-05T15:02:39.6720715+01:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\Program Files\\GrafanaLabs\\grafana\\data\\license.jwt"
+logger=cleanup t=2023-01-05T15:02:39.6830754+01:00 level=info msg="Completed cleanup jobs" duration=20.5016ms
+logger=cleanup t=2023-01-05T15:19:48.8594981+01:00 level=info msg="Completed cleanup jobs" duration=305.5691ms
+logger=cleanup t=2023-01-05T15:22:39.6654324+01:00 level=info msg="Completed cleanup jobs" duration=1.997ms
+logger=cleanup t=2023-01-05T15:32:39.6689786+01:00 level=info msg="Completed cleanup jobs" duration=6.0116ms
+logger=cleanup t=2023-01-05T15:42:39.6701487+01:00 level=info msg="Completed cleanup jobs" duration=6.5023ms
+logger=cleanup t=2023-01-05T15:52:39.6706258+01:00 level=info msg="Completed cleanup jobs" duration=7.4959ms
+logger=licensing t=2023-01-05T16:02:39.6707055+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2023-01-05T16:02:39.6707055+01:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\Program Files\\GrafanaLabs\\grafana\\data\\license.jwt"
+logger=cleanup t=2023-01-05T16:02:39.675704+01:00 level=info msg="Completed cleanup jobs" duration=12.8513ms
+logger=cleanup t=2023-01-05T16:12:39.6709395+01:00 level=info msg="Completed cleanup jobs" duration=7.3543ms
+logger=cleanup t=2023-01-05T16:22:39.6696468+01:00 level=info msg="Completed cleanup jobs" duration=6.5018ms
+logger=cleanup t=2023-01-05T16:32:39.6696659+01:00 level=info msg="Completed cleanup jobs" duration=6.4634ms
+logger=cleanup t=2023-01-05T16:42:39.6699992+01:00 level=info msg="Completed cleanup jobs" duration=6.0648ms

@@ -1,0 +1,918 @@
+logger=settings t=2023-01-04T09:59:20.4391705+01:00 level=info msg="Starting Grafana" version=9.3.2 commit=21c1d14e91 branch=HEAD compiled=2022-12-14T11:40:18+01:00
+logger=settings t=2023-01-04T09:59:20.4396679+01:00 level=info msg="Config loaded from" file="C:\\Program Files\\GrafanaLabs\\grafana/conf/defaults.ini"
+logger=settings t=2023-01-04T09:59:20.4396679+01:00 level=info msg="Path Home" path="C:\\Program Files\\GrafanaLabs\\grafana"
+logger=settings t=2023-01-04T09:59:20.4396679+01:00 level=info msg="Path Data" path="C:\\Program Files\\GrafanaLabs\\grafana\\data"
+logger=settings t=2023-01-04T09:59:20.4396679+01:00 level=info msg="Path Logs" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\log"
+logger=settings t=2023-01-04T09:59:20.4401714+01:00 level=info msg="Path Plugins" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=settings t=2023-01-04T09:59:20.4401714+01:00 level=info msg="Path Provisioning" path="C:\\Program Files\\GrafanaLabs\\grafana\\conf\\provisioning"
+logger=settings t=2023-01-04T09:59:20.4401714+01:00 level=info msg="App mode production"
+logger=sqlstore t=2023-01-04T09:59:20.4401714+01:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2023-01-04T09:59:20.4401714+01:00 level=info msg="Creating SQLite database file" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\grafana.db"
+logger=migrator t=2023-01-04T09:59:20.4426681+01:00 level=info msg="Starting DB migrations"
+logger=migrator t=2023-01-04T09:59:20.4426681+01:00 level=info msg="Executing migration" id="create migration_log table"
+logger=migrator t=2023-01-04T09:59:20.4481836+01:00 level=info msg="Executing migration" id="create user table"
+logger=migrator t=2023-01-04T09:59:20.453185+01:00 level=info msg="Executing migration" id="add unique index user.login"
+logger=migrator t=2023-01-04T09:59:20.4576851+01:00 level=info msg="Executing migration" id="add unique index user.email"
+logger=migrator t=2023-01-04T09:59:20.4626859+01:00 level=info msg="Executing migration" id="drop index UQE_user_login - v1"
+logger=migrator t=2023-01-04T09:59:20.467686+01:00 level=info msg="Executing migration" id="drop index UQE_user_email - v1"
+logger=migrator t=2023-01-04T09:59:20.4727041+01:00 level=info msg="Executing migration" id="Rename table user to user_v1 - v1"
+logger=migrator t=2023-01-04T09:59:20.4777045+01:00 level=info msg="Executing migration" id="create user table v2"
+logger=migrator t=2023-01-04T09:59:20.4822037+01:00 level=info msg="Executing migration" id="create index UQE_user_login - v2"
+logger=migrator t=2023-01-04T09:59:20.4868165+01:00 level=info msg="Executing migration" id="create index UQE_user_email - v2"
+logger=migrator t=2023-01-04T09:59:20.4907038+01:00 level=info msg="Executing migration" id="copy data_source v1 to v2"
+logger=migrator t=2023-01-04T09:59:20.4952039+01:00 level=info msg="Executing migration" id="Drop old table user_v1"
+logger=migrator t=2023-01-04T09:59:20.499204+01:00 level=info msg="Executing migration" id="Add column help_flags1 to user table"
+logger=migrator t=2023-01-04T09:59:20.5037041+01:00 level=info msg="Executing migration" id="Update user table charset"
+logger=migrator t=2023-01-04T09:59:20.5080548+01:00 level=info msg="Executing migration" id="Add last_seen_at column to user"
+logger=migrator t=2023-01-04T09:59:20.5122039+01:00 level=info msg="Executing migration" id="Add missing user data"
+logger=migrator t=2023-01-04T09:59:20.5167137+01:00 level=info msg="Executing migration" id="Add is_disabled column to user"
+logger=migrator t=2023-01-04T09:59:20.5212036+01:00 level=info msg="Executing migration" id="Add index user.login/user.email"
+logger=migrator t=2023-01-04T09:59:20.5257053+01:00 level=info msg="Executing migration" id="Add is_service_account column to user"
+logger=migrator t=2023-01-04T09:59:20.530704+01:00 level=info msg="Executing migration" id="Update is_service_account column to nullable"
+logger=migrator t=2023-01-04T09:59:20.53623+01:00 level=info msg="Executing migration" id="create temp user table v1-7"
+logger=migrator t=2023-01-04T09:59:20.5407634+01:00 level=info msg="Executing migration" id="create index IDX_temp_user_email - v1-7"
+logger=migrator t=2023-01-04T09:59:20.5457632+01:00 level=info msg="Executing migration" id="create index IDX_temp_user_org_id - v1-7"
+logger=migrator t=2023-01-04T09:59:20.5502637+01:00 level=info msg="Executing migration" id="create index IDX_temp_user_code - v1-7"
+logger=migrator t=2023-01-04T09:59:20.554881+01:00 level=info msg="Executing migration" id="create index IDX_temp_user_status - v1-7"
+logger=migrator t=2023-01-04T09:59:20.5592633+01:00 level=info msg="Executing migration" id="Update temp_user table charset"
+logger=migrator t=2023-01-04T09:59:20.5632619+01:00 level=info msg="Executing migration" id="drop index IDX_temp_user_email - v1"
+logger=migrator t=2023-01-04T09:59:20.5682629+01:00 level=info msg="Executing migration" id="drop index IDX_temp_user_org_id - v1"
+logger=migrator t=2023-01-04T09:59:20.5727454+01:00 level=info msg="Executing migration" id="drop index IDX_temp_user_code - v1"
+logger=migrator t=2023-01-04T09:59:20.5777618+01:00 level=info msg="Executing migration" id="drop index IDX_temp_user_status - v1"
+logger=migrator t=2023-01-04T09:59:20.5829336+01:00 level=info msg="Executing migration" id="Rename table temp_user to temp_user_tmp_qwerty - v1"
+logger=migrator t=2023-01-04T09:59:20.5877742+01:00 level=info msg="Executing migration" id="create temp_user v2"
+logger=migrator t=2023-01-04T09:59:20.5927773+01:00 level=info msg="Executing migration" id="create index IDX_temp_user_email - v2"
+logger=migrator t=2023-01-04T09:59:20.5977752+01:00 level=info msg="Executing migration" id="create index IDX_temp_user_org_id - v2"
+logger=migrator t=2023-01-04T09:59:20.6030184+01:00 level=info msg="Executing migration" id="create index IDX_temp_user_code - v2"
+logger=migrator t=2023-01-04T09:59:20.6072749+01:00 level=info msg="Executing migration" id="create index IDX_temp_user_status - v2"
+logger=migrator t=2023-01-04T09:59:20.6122753+01:00 level=info msg="Executing migration" id="copy temp_user v1 to v2"
+logger=migrator t=2023-01-04T09:59:20.617785+01:00 level=info msg="Executing migration" id="drop temp_user_tmp_qwerty"
+logger=migrator t=2023-01-04T09:59:20.6227745+01:00 level=info msg="Executing migration" id="Set created for temp users that will otherwise prematurely expire"
+logger=migrator t=2023-01-04T09:59:20.6277746+01:00 level=info msg="Executing migration" id="create star table"
+logger=migrator t=2023-01-04T09:59:20.6330412+01:00 level=info msg="Executing migration" id="add unique index star.user_id_dashboard_id"
+logger=migrator t=2023-01-04T09:59:20.6370478+01:00 level=info msg="Executing migration" id="create org table v1"
+logger=migrator t=2023-01-04T09:59:20.6418939+01:00 level=info msg="Executing migration" id="create index UQE_org_name - v1"
+logger=migrator t=2023-01-04T09:59:20.6460604+01:00 level=info msg="Executing migration" id="create org_user table v1"
+logger=migrator t=2023-01-04T09:59:20.6510609+01:00 level=info msg="Executing migration" id="create index IDX_org_user_org_id - v1"
+logger=migrator t=2023-01-04T09:59:20.656061+01:00 level=info msg="Executing migration" id="create index UQE_org_user_org_id_user_id - v1"
+logger=migrator t=2023-01-04T09:59:20.6600583+01:00 level=info msg="Executing migration" id="create index IDX_org_user_user_id - v1"
+logger=migrator t=2023-01-04T09:59:20.6650593+01:00 level=info msg="Executing migration" id="Update org table charset"
+logger=migrator t=2023-01-04T09:59:20.6694976+01:00 level=info msg="Executing migration" id="Update org_user table charset"
+logger=migrator t=2023-01-04T09:59:20.6730164+01:00 level=info msg="Executing migration" id="Migrate all Read Only Viewers to Viewers"
+logger=migrator t=2023-01-04T09:59:20.6781728+01:00 level=info msg="Executing migration" id="create dashboard table"
+logger=migrator t=2023-01-04T09:59:20.682693+01:00 level=info msg="Executing migration" id="add index dashboard.account_id"
+logger=migrator t=2023-01-04T09:59:20.6871921+01:00 level=info msg="Executing migration" id="add unique index dashboard_account_id_slug"
+logger=migrator t=2023-01-04T09:59:20.6922088+01:00 level=info msg="Executing migration" id="create dashboard_tag table"
+logger=migrator t=2023-01-04T09:59:20.6967042+01:00 level=info msg="Executing migration" id="add unique index dashboard_tag.dasboard_id_term"
+logger=migrator t=2023-01-04T09:59:20.7027058+01:00 level=info msg="Executing migration" id="drop index UQE_dashboard_tag_dashboard_id_term - v1"
+logger=migrator t=2023-01-04T09:59:20.7077028+01:00 level=info msg="Executing migration" id="Rename table dashboard to dashboard_v1 - v1"
+logger=migrator t=2023-01-04T09:59:20.7132069+01:00 level=info msg="Executing migration" id="create dashboard v2"
+logger=migrator t=2023-01-04T09:59:20.7187035+01:00 level=info msg="Executing migration" id="create index IDX_dashboard_org_id - v2"
+logger=migrator t=2023-01-04T09:59:20.7237331+01:00 level=info msg="Executing migration" id="create index UQE_dashboard_org_id_slug - v2"
+logger=migrator t=2023-01-04T09:59:20.7292475+01:00 level=info msg="Executing migration" id="copy dashboard v1 to v2"
+logger=migrator t=2023-01-04T09:59:20.7343249+01:00 level=info msg="Executing migration" id="drop table dashboard_v1"
+logger=migrator t=2023-01-04T09:59:20.7388239+01:00 level=info msg="Executing migration" id="alter dashboard.data to mediumtext v1"
+logger=migrator t=2023-01-04T09:59:20.7436864+01:00 level=info msg="Executing migration" id="Add column updated_by in dashboard - v2"
+logger=migrator t=2023-01-04T09:59:20.7488466+01:00 level=info msg="Executing migration" id="Add column created_by in dashboard - v2"
+logger=migrator t=2023-01-04T09:59:20.7543452+01:00 level=info msg="Executing migration" id="Add column gnetId in dashboard"
+logger=migrator t=2023-01-04T09:59:20.7599678+01:00 level=info msg="Executing migration" id="Add index for gnetId in dashboard"
+logger=migrator t=2023-01-04T09:59:20.7653462+01:00 level=info msg="Executing migration" id="Add column plugin_id in dashboard"
+logger=migrator t=2023-01-04T09:59:20.7703462+01:00 level=info msg="Executing migration" id="Add index for plugin_id in dashboard"
+logger=migrator t=2023-01-04T09:59:20.7750126+01:00 level=info msg="Executing migration" id="Add index for dashboard_id in dashboard_tag"
+logger=migrator t=2023-01-04T09:59:20.7812126+01:00 level=info msg="Executing migration" id="Update dashboard table charset"
+logger=migrator t=2023-01-04T09:59:20.7869663+01:00 level=info msg="Executing migration" id="Update dashboard_tag table charset"
+logger=migrator t=2023-01-04T09:59:20.7925548+01:00 level=info msg="Executing migration" id="Add column folder_id in dashboard"
+logger=migrator t=2023-01-04T09:59:20.7985554+01:00 level=info msg="Executing migration" id="Add column isFolder in dashboard"
+logger=migrator t=2023-01-04T09:59:20.8035552+01:00 level=info msg="Executing migration" id="Add column has_acl in dashboard"
+logger=migrator t=2023-01-04T09:59:20.8080531+01:00 level=info msg="Executing migration" id="Add column uid in dashboard"
+logger=migrator t=2023-01-04T09:59:20.8135542+01:00 level=info msg="Executing migration" id="Update uid column values in dashboard"
+logger=migrator t=2023-01-04T09:59:20.8180995+01:00 level=info msg="Executing migration" id="Add unique index dashboard_org_id_uid"
+logger=migrator t=2023-01-04T09:59:20.8236917+01:00 level=info msg="Executing migration" id="Remove unique index org_id_slug"
+logger=migrator t=2023-01-04T09:59:20.828811+01:00 level=info msg="Executing migration" id="Update dashboard title length"
+logger=migrator t=2023-01-04T09:59:20.8338126+01:00 level=info msg="Executing migration" id="Add unique index for dashboard_org_id_title_folder_id"
+logger=migrator t=2023-01-04T09:59:20.8387034+01:00 level=info msg="Executing migration" id="create dashboard_provisioning"
+logger=migrator t=2023-01-04T09:59:20.8433271+01:00 level=info msg="Executing migration" id="Rename table dashboard_provisioning to dashboard_provisioning_tmp_qwerty - v1"
+logger=migrator t=2023-01-04T09:59:20.8493272+01:00 level=info msg="Executing migration" id="create dashboard_provisioning v2"
+logger=migrator t=2023-01-04T09:59:20.8548269+01:00 level=info msg="Executing migration" id="create index IDX_dashboard_provisioning_dashboard_id - v2"
+logger=migrator t=2023-01-04T09:59:20.8603332+01:00 level=info msg="Executing migration" id="create index IDX_dashboard_provisioning_dashboard_id_name - v2"
+logger=migrator t=2023-01-04T09:59:20.865326+01:00 level=info msg="Executing migration" id="copy dashboard_provisioning v1 to v2"
+logger=migrator t=2023-01-04T09:59:20.8695982+01:00 level=info msg="Executing migration" id="drop dashboard_provisioning_tmp_qwerty"
+logger=migrator t=2023-01-04T09:59:20.8751116+01:00 level=info msg="Executing migration" id="Add check_sum column"
+logger=migrator t=2023-01-04T09:59:20.8811432+01:00 level=info msg="Executing migration" id="Add index for dashboard_title"
+logger=migrator t=2023-01-04T09:59:20.8866437+01:00 level=info msg="Executing migration" id="delete tags for deleted dashboards"
+logger=migrator t=2023-01-04T09:59:20.8913001+01:00 level=info msg="Executing migration" id="delete stars for deleted dashboards"
+logger=migrator t=2023-01-04T09:59:20.8951423+01:00 level=info msg="Executing migration" id="Add index for dashboard_is_folder"
+logger=migrator t=2023-01-04T09:59:20.9001478+01:00 level=info msg="Executing migration" id="Add isPublic for dashboard"
+logger=migrator t=2023-01-04T09:59:20.9051425+01:00 level=info msg="Executing migration" id="create data_source table"
+logger=migrator t=2023-01-04T09:59:20.910643+01:00 level=info msg="Executing migration" id="add index data_source.account_id"
+logger=migrator t=2023-01-04T09:59:20.9156978+01:00 level=info msg="Executing migration" id="add unique index data_source.account_id_name"
+logger=migrator t=2023-01-04T09:59:20.9206429+01:00 level=info msg="Executing migration" id="drop index IDX_data_source_account_id - v1"
+logger=migrator t=2023-01-04T09:59:20.9256455+01:00 level=info msg="Executing migration" id="drop index UQE_data_source_account_id_name - v1"
+logger=migrator t=2023-01-04T09:59:20.9306437+01:00 level=info msg="Executing migration" id="Rename table data_source to data_source_v1 - v1"
+logger=migrator t=2023-01-04T09:59:20.9367299+01:00 level=info msg="Executing migration" id="create data_source table v2"
+logger=migrator t=2023-01-04T09:59:20.9416432+01:00 level=info msg="Executing migration" id="create index IDX_data_source_org_id - v2"
+logger=migrator t=2023-01-04T09:59:20.9466428+01:00 level=info msg="Executing migration" id="create index UQE_data_source_org_id_name - v2"
+logger=migrator t=2023-01-04T09:59:20.9516428+01:00 level=info msg="Executing migration" id="Drop old table data_source_v1 #2"
+logger=migrator t=2023-01-04T09:59:20.9571439+01:00 level=info msg="Executing migration" id="Add column with_credentials"
+logger=migrator t=2023-01-04T09:59:20.9621457+01:00 level=info msg="Executing migration" id="Add secure json data column"
+logger=migrator t=2023-01-04T09:59:20.9681708+01:00 level=info msg="Executing migration" id="Update data_source table charset"
+logger=migrator t=2023-01-04T09:59:20.9730846+01:00 level=info msg="Executing migration" id="Update initial version to 1"
+logger=migrator t=2023-01-04T09:59:20.9776871+01:00 level=info msg="Executing migration" id="Add read_only data column"
+logger=migrator t=2023-01-04T09:59:20.9836949+01:00 level=info msg="Executing migration" id="Migrate logging ds to loki ds"
+logger=migrator t=2023-01-04T09:59:20.9881865+01:00 level=info msg="Executing migration" id="Update json_data with nulls"
+logger=migrator t=2023-01-04T09:59:20.9926878+01:00 level=info msg="Executing migration" id="Add uid column"
+logger=migrator t=2023-01-04T09:59:20.9984708+01:00 level=info msg="Executing migration" id="Update uid value"
+logger=migrator t=2023-01-04T09:59:21.0031878+01:00 level=info msg="Executing migration" id="Add unique index datasource_org_id_uid"
+logger=migrator t=2023-01-04T09:59:21.0086869+01:00 level=info msg="Executing migration" id="add unique index datasource_org_id_is_default"
+logger=migrator t=2023-01-04T09:59:21.0141859+01:00 level=info msg="Executing migration" id="create api_key table"
+logger=migrator t=2023-01-04T09:59:21.0196925+01:00 level=info msg="Executing migration" id="add index api_key.account_id"
+logger=migrator t=2023-01-04T09:59:21.0246873+01:00 level=info msg="Executing migration" id="add index api_key.key"
+logger=migrator t=2023-01-04T09:59:21.0296868+01:00 level=info msg="Executing migration" id="add index api_key.account_id_name"
+logger=migrator t=2023-01-04T09:59:21.035693+01:00 level=info msg="Executing migration" id="drop index IDX_api_key_account_id - v1"
+logger=migrator t=2023-01-04T09:59:21.0406875+01:00 level=info msg="Executing migration" id="drop index UQE_api_key_key - v1"
+logger=migrator t=2023-01-04T09:59:21.0462789+01:00 level=info msg="Executing migration" id="drop index UQE_api_key_account_id_name - v1"
+logger=migrator t=2023-01-04T09:59:21.0512943+01:00 level=info msg="Executing migration" id="Rename table api_key to api_key_v1 - v1"
+logger=migrator t=2023-01-04T09:59:21.0578128+01:00 level=info msg="Executing migration" id="create api_key table v2"
+logger=migrator t=2023-01-04T09:59:21.0633074+01:00 level=info msg="Executing migration" id="create index IDX_api_key_org_id - v2"
+logger=migrator t=2023-01-04T09:59:21.0690752+01:00 level=info msg="Executing migration" id="create index UQE_api_key_key - v2"
+logger=migrator t=2023-01-04T09:59:21.0743267+01:00 level=info msg="Executing migration" id="create index UQE_api_key_org_id_name - v2"
+logger=migrator t=2023-01-04T09:59:21.0798278+01:00 level=info msg="Executing migration" id="copy api_key v1 to v2"
+logger=migrator t=2023-01-04T09:59:21.084823+01:00 level=info msg="Executing migration" id="Drop old table api_key_v1"
+logger=migrator t=2023-01-04T09:59:21.0898234+01:00 level=info msg="Executing migration" id="Update api_key table charset"
+logger=migrator t=2023-01-04T09:59:21.0938231+01:00 level=info msg="Executing migration" id="Add expires to api_key table"
+logger=migrator t=2023-01-04T09:59:21.0989528+01:00 level=info msg="Executing migration" id="Add service account foreign key"
+logger=migrator t=2023-01-04T09:59:21.1046021+01:00 level=info msg="Executing migration" id="set service account foreign key to nil if 0"
+logger=migrator t=2023-01-04T09:59:21.1089675+01:00 level=info msg="Executing migration" id="Add last_used_at to api_key table"
+logger=migrator t=2023-01-04T09:59:21.1139676+01:00 level=info msg="Executing migration" id="Add is_revoked column to api_key table"
+logger=migrator t=2023-01-04T09:59:21.1204697+01:00 level=info msg="Executing migration" id="create dashboard_snapshot table v4"
+logger=migrator t=2023-01-04T09:59:21.1259675+01:00 level=info msg="Executing migration" id="drop table dashboard_snapshot_v4 #1"
+logger=migrator t=2023-01-04T09:59:21.1304678+01:00 level=info msg="Executing migration" id="create dashboard_snapshot table v5 #2"
+logger=migrator t=2023-01-04T09:59:21.1360045+01:00 level=info msg="Executing migration" id="create index UQE_dashboard_snapshot_key - v5"
+logger=migrator t=2023-01-04T09:59:21.1420376+01:00 level=info msg="Executing migration" id="create index UQE_dashboard_snapshot_delete_key - v5"
+logger=migrator t=2023-01-04T09:59:21.1468329+01:00 level=info msg="Executing migration" id="create index IDX_dashboard_snapshot_user_id - v5"
+logger=migrator t=2023-01-04T09:59:21.152932+01:00 level=info msg="Executing migration" id="alter dashboard_snapshot to mediumtext v2"
+logger=migrator t=2023-01-04T09:59:21.1575449+01:00 level=info msg="Executing migration" id="Update dashboard_snapshot table charset"
+logger=migrator t=2023-01-04T09:59:21.1615431+01:00 level=info msg="Executing migration" id="Add column external_delete_url to dashboard_snapshots table"
+logger=migrator t=2023-01-04T09:59:21.1670422+01:00 level=info msg="Executing migration" id="Add encrypted dashboard json column"
+logger=migrator t=2023-01-04T09:59:21.1730447+01:00 level=info msg="Executing migration" id="Change dashboard_encrypted column to MEDIUMBLOB"
+logger=migrator t=2023-01-04T09:59:21.1775437+01:00 level=info msg="Executing migration" id="create quota table v1"
+logger=migrator t=2023-01-04T09:59:21.1831212+01:00 level=info msg="Executing migration" id="create index UQE_quota_org_id_user_id_target - v1"
+logger=migrator t=2023-01-04T09:59:21.1876305+01:00 level=info msg="Executing migration" id="Update quota table charset"
+logger=migrator t=2023-01-04T09:59:21.1921474+01:00 level=info msg="Executing migration" id="create plugin_setting table"
+logger=migrator t=2023-01-04T09:59:21.1971443+01:00 level=info msg="Executing migration" id="create index UQE_plugin_setting_org_id_plugin_id - v1"
+logger=migrator t=2023-01-04T09:59:21.2020919+01:00 level=info msg="Executing migration" id="Add column plugin_version to plugin_settings"
+logger=migrator t=2023-01-04T09:59:21.2071543+01:00 level=info msg="Executing migration" id="Update plugin_setting table charset"
+logger=migrator t=2023-01-04T09:59:21.2116544+01:00 level=info msg="Executing migration" id="create session table"
+logger=migrator t=2023-01-04T09:59:21.2171588+01:00 level=info msg="Executing migration" id="Drop old table playlist table"
+logger=migrator t=2023-01-04T09:59:21.2218542+01:00 level=info msg="Executing migration" id="Drop old table playlist_item table"
+logger=migrator t=2023-01-04T09:59:21.2256538+01:00 level=info msg="Executing migration" id="create playlist table v2"
+logger=migrator t=2023-01-04T09:59:21.2301588+01:00 level=info msg="Executing migration" id="create playlist item table v2"
+logger=migrator t=2023-01-04T09:59:21.236156+01:00 level=info msg="Executing migration" id="Update playlist table charset"
+logger=migrator t=2023-01-04T09:59:21.2401549+01:00 level=info msg="Executing migration" id="Update playlist_item table charset"
+logger=migrator t=2023-01-04T09:59:21.2441546+01:00 level=info msg="Executing migration" id="drop preferences table v2"
+logger=migrator t=2023-01-04T09:59:21.2486548+01:00 level=info msg="Executing migration" id="drop preferences table v3"
+logger=migrator t=2023-01-04T09:59:21.2531841+01:00 level=info msg="Executing migration" id="create preferences table v3"
+logger=migrator t=2023-01-04T09:59:21.2586974+01:00 level=info msg="Executing migration" id="Update preferences table charset"
+logger=migrator t=2023-01-04T09:59:21.2637174+01:00 level=info msg="Executing migration" id="Add column team_id in preferences"
+logger=migrator t=2023-01-04T09:59:21.2687435+01:00 level=info msg="Executing migration" id="Update team_id column values in preferences"
+logger=migrator t=2023-01-04T09:59:21.2732425+01:00 level=info msg="Executing migration" id="Add column week_start in preferences"
+logger=migrator t=2023-01-04T09:59:21.2792427+01:00 level=info msg="Executing migration" id="Add column preferences.json_data"
+logger=migrator t=2023-01-04T09:59:21.2853484+01:00 level=info msg="Executing migration" id="alter preferences.json_data to mediumtext v1"
+logger=migrator t=2023-01-04T09:59:21.2897415+01:00 level=info msg="Executing migration" id="Add preferences index org_id"
+logger=migrator t=2023-01-04T09:59:21.2952421+01:00 level=info msg="Executing migration" id="Add preferences index user_id"
+logger=migrator t=2023-01-04T09:59:21.3042427+01:00 level=info msg="Executing migration" id="create alert table v1"
+logger=migrator t=2023-01-04T09:59:21.3098236+01:00 level=info msg="Executing migration" id="add index alert org_id & id "
+logger=migrator t=2023-01-04T09:59:21.3152437+01:00 level=info msg="Executing migration" id="add index alert state"
+logger=migrator t=2023-01-04T09:59:21.3202429+01:00 level=info msg="Executing migration" id="add index alert dashboard_id"
+logger=migrator t=2023-01-04T09:59:21.3252416+01:00 level=info msg="Executing migration" id="Create alert_rule_tag table v1"
+logger=migrator t=2023-01-04T09:59:21.3312452+01:00 level=info msg="Executing migration" id="Add unique index alert_rule_tag.alert_id_tag_id"
+logger=migrator t=2023-01-04T09:59:21.3367426+01:00 level=info msg="Executing migration" id="drop index UQE_alert_rule_tag_alert_id_tag_id - v1"
+logger=migrator t=2023-01-04T09:59:21.3412427+01:00 level=info msg="Executing migration" id="Rename table alert_rule_tag to alert_rule_tag_v1 - v1"
+logger=migrator t=2023-01-04T09:59:21.3497467+01:00 level=info msg="Executing migration" id="Create alert_rule_tag table v2"
+logger=migrator t=2023-01-04T09:59:21.3547418+01:00 level=info msg="Executing migration" id="create index UQE_alert_rule_tag_alert_id_tag_id - Add unique index alert_rule_tag.alert_id_tag_id V2"
+logger=migrator t=2023-01-04T09:59:21.3597569+01:00 level=info msg="Executing migration" id="copy alert_rule_tag v1 to v2"
+logger=migrator t=2023-01-04T09:59:21.3642821+01:00 level=info msg="Executing migration" id="drop table alert_rule_tag_v1"
+logger=migrator t=2023-01-04T09:59:21.3693426+01:00 level=info msg="Executing migration" id="create alert_notification table v1"
+logger=migrator t=2023-01-04T09:59:21.3746165+01:00 level=info msg="Executing migration" id="Add column is_default"
+logger=migrator t=2023-01-04T09:59:21.3807893+01:00 level=info msg="Executing migration" id="Add column frequency"
+logger=migrator t=2023-01-04T09:59:21.3872924+01:00 level=info msg="Executing migration" id="Add column send_reminder"
+logger=migrator t=2023-01-04T09:59:21.3922895+01:00 level=info msg="Executing migration" id="Add column disable_resolve_message"
+logger=migrator t=2023-01-04T09:59:21.398794+01:00 level=info msg="Executing migration" id="add index alert_notification org_id & name"
+logger=migrator t=2023-01-04T09:59:21.4037909+01:00 level=info msg="Executing migration" id="Update alert table charset"
+logger=migrator t=2023-01-04T09:59:21.4077904+01:00 level=info msg="Executing migration" id="Update alert_notification table charset"
+logger=migrator t=2023-01-04T09:59:21.4122899+01:00 level=info msg="Executing migration" id="create notification_journal table v1"
+logger=migrator t=2023-01-04T09:59:21.4177909+01:00 level=info msg="Executing migration" id="add index notification_journal org_id & alert_id & notifier_id"
+logger=migrator t=2023-01-04T09:59:21.4223615+01:00 level=info msg="Executing migration" id="drop alert_notification_journal"
+logger=migrator t=2023-01-04T09:59:21.4269878+01:00 level=info msg="Executing migration" id="create alert_notification_state table v1"
+logger=migrator t=2023-01-04T09:59:21.4314923+01:00 level=info msg="Executing migration" id="add index alert_notification_state org_id & alert_id & notifier_id"
+logger=migrator t=2023-01-04T09:59:21.4375058+01:00 level=info msg="Executing migration" id="Add for to alert table"
+logger=migrator t=2023-01-04T09:59:21.4420031+01:00 level=info msg="Executing migration" id="Add column uid in alert_notification"
+logger=migrator t=2023-01-04T09:59:21.4485245+01:00 level=info msg="Executing migration" id="Update uid column values in alert_notification"
+logger=migrator t=2023-01-04T09:59:21.4535248+01:00 level=info msg="Executing migration" id="Add unique index alert_notification_org_id_uid"
+logger=migrator t=2023-01-04T09:59:21.4585227+01:00 level=info msg="Executing migration" id="Remove unique index org_id_name"
+logger=migrator t=2023-01-04T09:59:21.4640235+01:00 level=info msg="Executing migration" id="Add column secure_settings in alert_notification"
+logger=migrator t=2023-01-04T09:59:21.4705248+01:00 level=info msg="Executing migration" id="alter alert.settings to mediumtext"
+logger=migrator t=2023-01-04T09:59:21.4746452+01:00 level=info msg="Executing migration" id="Add non-unique index alert_notification_state_alert_id"
+logger=migrator t=2023-01-04T09:59:21.481176+01:00 level=info msg="Executing migration" id="Add non-unique index alert_rule_tag_alert_id"
+logger=migrator t=2023-01-04T09:59:21.487168+01:00 level=info msg="Executing migration" id="Drop old annotation table v4"
+logger=migrator t=2023-01-04T09:59:21.4916646+01:00 level=info msg="Executing migration" id="create annotation table v5"
+logger=migrator t=2023-01-04T09:59:21.4966633+01:00 level=info msg="Executing migration" id="add index annotation 0 v3"
+logger=migrator t=2023-01-04T09:59:21.5016636+01:00 level=info msg="Executing migration" id="add index annotation 1 v3"
+logger=migrator t=2023-01-04T09:59:21.5071639+01:00 level=info msg="Executing migration" id="add index annotation 2 v3"
+logger=migrator t=2023-01-04T09:59:21.5116127+01:00 level=info msg="Executing migration" id="add index annotation 3 v3"
+logger=migrator t=2023-01-04T09:59:21.5181353+01:00 level=info msg="Executing migration" id="add index annotation 4 v3"
+logger=migrator t=2023-01-04T09:59:21.5236487+01:00 level=info msg="Executing migration" id="Update annotation table charset"
+logger=migrator t=2023-01-04T09:59:21.5286494+01:00 level=info msg="Executing migration" id="Add column region_id to annotation table"
+logger=migrator t=2023-01-04T09:59:21.5346498+01:00 level=info msg="Executing migration" id="Drop category_id index"
+logger=migrator t=2023-01-04T09:59:21.540027+01:00 level=info msg="Executing migration" id="Add column tags to annotation table"
+logger=migrator t=2023-01-04T09:59:21.5451491+01:00 level=info msg="Executing migration" id="Create annotation_tag table v2"
+logger=migrator t=2023-01-04T09:59:21.5501485+01:00 level=info msg="Executing migration" id="Add unique index annotation_tag.annotation_id_tag_id"
+logger=migrator t=2023-01-04T09:59:21.556154+01:00 level=info msg="Executing migration" id="drop index UQE_annotation_tag_annotation_id_tag_id - v2"
+logger=migrator t=2023-01-04T09:59:21.5616528+01:00 level=info msg="Executing migration" id="Rename table annotation_tag to annotation_tag_v2 - v2"
+logger=migrator t=2023-01-04T09:59:21.5702324+01:00 level=info msg="Executing migration" id="Create annotation_tag table v3"
+logger=migrator t=2023-01-04T09:59:21.5747412+01:00 level=info msg="Executing migration" id="create index UQE_annotation_tag_annotation_id_tag_id - Add unique index annotation_tag.annotation_id_tag_id V3"
+logger=migrator t=2023-01-04T09:59:21.5801604+01:00 level=info msg="Executing migration" id="copy annotation_tag v2 to v3"
+logger=migrator t=2023-01-04T09:59:21.5847528+01:00 level=info msg="Executing migration" id="drop table annotation_tag_v2"
+logger=migrator t=2023-01-04T09:59:21.5897522+01:00 level=info msg="Executing migration" id="Update alert annotations and set TEXT to empty"
+logger=migrator t=2023-01-04T09:59:21.5937509+01:00 level=info msg="Executing migration" id="Add created time to annotation table"
+logger=migrator t=2023-01-04T09:59:21.6000437+01:00 level=info msg="Executing migration" id="Add updated time to annotation table"
+logger=migrator t=2023-01-04T09:59:21.6052521+01:00 level=info msg="Executing migration" id="Add index for created in annotation table"
+logger=migrator t=2023-01-04T09:59:21.6102502+01:00 level=info msg="Executing migration" id="Add index for updated in annotation table"
+logger=migrator t=2023-01-04T09:59:21.6157512+01:00 level=info msg="Executing migration" id="Convert existing annotations from seconds to milliseconds"
+logger=migrator t=2023-01-04T09:59:21.6207523+01:00 level=info msg="Executing migration" id="Add epoch_end column"
+logger=migrator t=2023-01-04T09:59:21.6257521+01:00 level=info msg="Executing migration" id="Add index for epoch_end"
+logger=migrator t=2023-01-04T09:59:21.6316058+01:00 level=info msg="Executing migration" id="Make epoch_end the same as epoch"
+logger=migrator t=2023-01-04T09:59:21.635752+01:00 level=info msg="Executing migration" id="Move region to single row"
+logger=migrator t=2023-01-04T09:59:21.640752+01:00 level=info msg="Executing migration" id="Remove index org_id_epoch from annotation table"
+logger=migrator t=2023-01-04T09:59:21.6457511+01:00 level=info msg="Executing migration" id="Remove index org_id_dashboard_id_panel_id_epoch from annotation table"
+logger=migrator t=2023-01-04T09:59:21.6507511+01:00 level=info msg="Executing migration" id="Add index for org_id_dashboard_id_epoch_end_epoch on annotation table"
+logger=migrator t=2023-01-04T09:59:21.6562529+01:00 level=info msg="Executing migration" id="Add index for org_id_epoch_end_epoch on annotation table"
+logger=migrator t=2023-01-04T09:59:21.6612525+01:00 level=info msg="Executing migration" id="Remove index org_id_epoch_epoch_end from annotation table"
+logger=migrator t=2023-01-04T09:59:21.6662508+01:00 level=info msg="Executing migration" id="Add index for alert_id on annotation table"
+logger=migrator t=2023-01-04T09:59:21.6712525+01:00 level=info msg="Executing migration" id="Increase tags column to length 4096"
+logger=migrator t=2023-01-04T09:59:21.6757548+01:00 level=info msg="Executing migration" id="create test_data table"
+logger=migrator t=2023-01-04T09:59:21.6812516+01:00 level=info msg="Executing migration" id="create dashboard_version table v1"
+logger=migrator t=2023-01-04T09:59:21.6867521+01:00 level=info msg="Executing migration" id="add index dashboard_version.dashboard_id"
+logger=migrator t=2023-01-04T09:59:21.6912512+01:00 level=info msg="Executing migration" id="add unique index dashboard_version.dashboard_id and dashboard_version.version"
+logger=migrator t=2023-01-04T09:59:21.6962562+01:00 level=info msg="Executing migration" id="Set dashboard version to 1 where 0"
+logger=migrator t=2023-01-04T09:59:21.7007752+01:00 level=info msg="Executing migration" id="save existing dashboard data in dashboard_version table v1"
+logger=migrator t=2023-01-04T09:59:21.705775+01:00 level=info msg="Executing migration" id="alter dashboard_version.data to mediumtext v1"
+logger=migrator t=2023-01-04T09:59:21.7097749+01:00 level=info msg="Executing migration" id="create team table"
+logger=migrator t=2023-01-04T09:59:21.715279+01:00 level=info msg="Executing migration" id="add index team.org_id"
+logger=migrator t=2023-01-04T09:59:21.721227+01:00 level=info msg="Executing migration" id="add unique index team_org_id_name"
+logger=migrator t=2023-01-04T09:59:21.7262744+01:00 level=info msg="Executing migration" id="create team member table"
+logger=migrator t=2023-01-04T09:59:21.7322758+01:00 level=info msg="Executing migration" id="add index team_member.org_id"
+logger=migrator t=2023-01-04T09:59:21.7372754+01:00 level=info msg="Executing migration" id="add unique index team_member_org_id_team_id_user_id"
+logger=migrator t=2023-01-04T09:59:21.7427911+01:00 level=info msg="Executing migration" id="add index team_member.team_id"
+logger=migrator t=2023-01-04T09:59:21.7483178+01:00 level=info msg="Executing migration" id="Add column email to team table"
+logger=migrator t=2023-01-04T09:59:21.754318+01:00 level=info msg="Executing migration" id="Add column external to team_member table"
+logger=migrator t=2023-01-04T09:59:21.761818+01:00 level=info msg="Executing migration" id="Add column permission to team_member table"
+logger=migrator t=2023-01-04T09:59:21.7684277+01:00 level=info msg="Executing migration" id="create dashboard acl table"
+logger=migrator t=2023-01-04T09:59:21.773787+01:00 level=info msg="Executing migration" id="add index dashboard_acl_dashboard_id"
+logger=migrator t=2023-01-04T09:59:21.7793051+01:00 level=info msg="Executing migration" id="add unique index dashboard_acl_dashboard_id_user_id"
+logger=migrator t=2023-01-04T09:59:21.7848942+01:00 level=info msg="Executing migration" id="add unique index dashboard_acl_dashboard_id_team_id"
+logger=migrator t=2023-01-04T09:59:21.7909762+01:00 level=info msg="Executing migration" id="add index dashboard_acl_user_id"
+logger=migrator t=2023-01-04T09:59:21.7974121+01:00 level=info msg="Executing migration" id="add index dashboard_acl_team_id"
+logger=migrator t=2023-01-04T09:59:21.8019124+01:00 level=info msg="Executing migration" id="add index dashboard_acl_org_id_role"
+logger=migrator t=2023-01-04T09:59:21.8074121+01:00 level=info msg="Executing migration" id="add index dashboard_permission"
+logger=migrator t=2023-01-04T09:59:21.8119125+01:00 level=info msg="Executing migration" id="save default acl rules in dashboard_acl table"
+logger=migrator t=2023-01-04T09:59:21.8174121+01:00 level=info msg="Executing migration" id="delete acl rules for deleted dashboards and folders"
+logger=migrator t=2023-01-04T09:59:21.8229386+01:00 level=info msg="Executing migration" id="create tag table"
+logger=migrator t=2023-01-04T09:59:21.8284127+01:00 level=info msg="Executing migration" id="add index tag.key_value"
+logger=migrator t=2023-01-04T09:59:21.8344175+01:00 level=info msg="Executing migration" id="create login attempt table"
+logger=migrator t=2023-01-04T09:59:21.8399161+01:00 level=info msg="Executing migration" id="add index login_attempt.username"
+logger=migrator t=2023-01-04T09:59:21.8449066+01:00 level=info msg="Executing migration" id="drop index IDX_login_attempt_username - v1"
+logger=migrator t=2023-01-04T09:59:21.8505761+01:00 level=info msg="Executing migration" id="Rename table login_attempt to login_attempt_tmp_qwerty - v1"
+logger=migrator t=2023-01-04T09:59:21.8591008+01:00 level=info msg="Executing migration" id="create login_attempt v2"
+logger=migrator t=2023-01-04T09:59:21.865556+01:00 level=info msg="Executing migration" id="create index IDX_login_attempt_username - v2"
+logger=migrator t=2023-01-04T09:59:21.8711014+01:00 level=info msg="Executing migration" id="copy login_attempt v1 to v2"
+logger=migrator t=2023-01-04T09:59:21.8761015+01:00 level=info msg="Executing migration" id="drop login_attempt_tmp_qwerty"
+logger=migrator t=2023-01-04T09:59:21.8821049+01:00 level=info msg="Executing migration" id="create user auth table"
+logger=migrator t=2023-01-04T09:59:21.8879497+01:00 level=info msg="Executing migration" id="create index IDX_user_auth_auth_module_auth_id - v1"
+logger=migrator t=2023-01-04T09:59:21.8931265+01:00 level=info msg="Executing migration" id="alter user_auth.auth_id to length 190"
+logger=migrator t=2023-01-04T09:59:21.8981124+01:00 level=info msg="Executing migration" id="Add OAuth access token to user_auth"
+logger=migrator t=2023-01-04T09:59:21.9051261+01:00 level=info msg="Executing migration" id="Add OAuth refresh token to user_auth"
+logger=migrator t=2023-01-04T09:59:21.9116123+01:00 level=info msg="Executing migration" id="Add OAuth token type to user_auth"
+logger=migrator t=2023-01-04T09:59:21.9190997+01:00 level=info msg="Executing migration" id="Add OAuth expiry to user_auth"
+logger=migrator t=2023-01-04T09:59:21.9247134+01:00 level=info msg="Executing migration" id="Add index to user_id column in user_auth"
+logger=migrator t=2023-01-04T09:59:21.9306907+01:00 level=info msg="Executing migration" id="Add OAuth ID token to user_auth"
+logger=migrator t=2023-01-04T09:59:21.9371993+01:00 level=info msg="Executing migration" id="create server_lock table"
+logger=migrator t=2023-01-04T09:59:21.9422114+01:00 level=info msg="Executing migration" id="add index server_lock.operation_uid"
+logger=migrator t=2023-01-04T09:59:21.9477131+01:00 level=info msg="Executing migration" id="create user auth token table"
+logger=migrator t=2023-01-04T09:59:21.9532011+01:00 level=info msg="Executing migration" id="add unique index user_auth_token.auth_token"
+logger=migrator t=2023-01-04T09:59:21.9587131+01:00 level=info msg="Executing migration" id="add unique index user_auth_token.prev_auth_token"
+logger=migrator t=2023-01-04T09:59:21.9646993+01:00 level=info msg="Executing migration" id="add index user_auth_token.user_id"
+logger=migrator t=2023-01-04T09:59:21.9702038+01:00 level=info msg="Executing migration" id="Add revoked_at to the user auth token"
+logger=migrator t=2023-01-04T09:59:21.9766993+01:00 level=info msg="Executing migration" id="create cache_data table"
+logger=migrator t=2023-01-04T09:59:21.9827132+01:00 level=info msg="Executing migration" id="add unique index cache_data.cache_key"
+logger=migrator t=2023-01-04T09:59:21.9883988+01:00 level=info msg="Executing migration" id="create short_url table v1"
+logger=migrator t=2023-01-04T09:59:21.9947133+01:00 level=info msg="Executing migration" id="add index short_url.org_id-uid"
+logger=migrator t=2023-01-04T09:59:22.0001993+01:00 level=info msg="Executing migration" id="alter table short_url alter column created_by type to bigint"
+logger=migrator t=2023-01-04T09:59:22.005713+01:00 level=info msg="Executing migration" id="delete alert_definition table"
+logger=migrator t=2023-01-04T09:59:22.0107136+01:00 level=info msg="Executing migration" id="recreate alert_definition table"
+logger=migrator t=2023-01-04T09:59:22.0173727+01:00 level=info msg="Executing migration" id="add index in alert_definition on org_id and title columns"
+logger=migrator t=2023-01-04T09:59:22.0228784+01:00 level=info msg="Executing migration" id="add index in alert_definition on org_id and uid columns"
+logger=migrator t=2023-01-04T09:59:22.0282492+01:00 level=info msg="Executing migration" id="alter alert_definition table data column to mediumtext in mysql"
+logger=migrator t=2023-01-04T09:59:22.0329317+01:00 level=info msg="Executing migration" id="drop index in alert_definition on org_id and title columns"
+logger=migrator t=2023-01-04T09:59:22.0379456+01:00 level=info msg="Executing migration" id="drop index in alert_definition on org_id and uid columns"
+logger=migrator t=2023-01-04T09:59:22.0439457+01:00 level=info msg="Executing migration" id="add unique index in alert_definition on org_id and title columns"
+logger=migrator t=2023-01-04T09:59:22.0489318+01:00 level=info msg="Executing migration" id="add unique index in alert_definition on org_id and uid columns"
+logger=migrator t=2023-01-04T09:59:22.0544321+01:00 level=info msg="Executing migration" id="Add column paused in alert_definition"
+logger=migrator t=2023-01-04T09:59:22.0611258+01:00 level=info msg="Executing migration" id="drop alert_definition table"
+logger=migrator t=2023-01-04T09:59:22.0668703+01:00 level=info msg="Executing migration" id="delete alert_definition_version table"
+logger=migrator t=2023-01-04T09:59:22.0723703+01:00 level=info msg="Executing migration" id="recreate alert_definition_version table"
+logger=migrator t=2023-01-04T09:59:22.0778701+01:00 level=info msg="Executing migration" id="add index in alert_definition_version table on alert_definition_id and version columns"
+logger=migrator t=2023-01-04T09:59:22.0833702+01:00 level=info msg="Executing migration" id="add index in alert_definition_version table on alert_definition_uid and version columns"
+logger=migrator t=2023-01-04T09:59:22.0893586+01:00 level=info msg="Executing migration" id="alter alert_definition_version table data column to mediumtext in mysql"
+logger=migrator t=2023-01-04T09:59:22.0938562+01:00 level=info msg="Executing migration" id="drop alert_definition_version table"
+logger=migrator t=2023-01-04T09:59:22.0993562+01:00 level=info msg="Executing migration" id="create alert_instance table"
+logger=migrator t=2023-01-04T09:59:22.1048562+01:00 level=info msg="Executing migration" id="add index in alert_instance table on def_org_id, def_uid and current_state columns"
+logger=migrator t=2023-01-04T09:59:22.1103958+01:00 level=info msg="Executing migration" id="add index in alert_instance table on def_org_id, current_state columns"
+logger=migrator t=2023-01-04T09:59:22.1164585+01:00 level=info msg="Executing migration" id="add column current_state_end to alert_instance"
+logger=migrator t=2023-01-04T09:59:22.1224465+01:00 level=info msg="Executing migration" id="remove index def_org_id, def_uid, current_state on alert_instance"
+logger=migrator t=2023-01-04T09:59:22.1279494+01:00 level=info msg="Executing migration" id="remove index def_org_id, current_state on alert_instance"
+logger=migrator t=2023-01-04T09:59:22.1339606+01:00 level=info msg="Executing migration" id="rename def_org_id to rule_org_id in alert_instance"
+logger=migrator t=2023-01-04T09:59:22.1469123+01:00 level=info msg="Executing migration" id="rename def_uid to rule_uid in alert_instance"
+logger=migrator t=2023-01-04T09:59:22.1599963+01:00 level=info msg="Executing migration" id="add index rule_org_id, rule_uid, current_state on alert_instance"
+logger=migrator t=2023-01-04T09:59:22.1650108+01:00 level=info msg="Executing migration" id="add index rule_org_id, current_state on alert_instance"
+logger=migrator t=2023-01-04T09:59:22.171729+01:00 level=info msg="Executing migration" id="add current_reason column related to current_state"
+logger=migrator t=2023-01-04T09:59:22.1780101+01:00 level=info msg="Executing migration" id="create alert_rule table"
+logger=migrator t=2023-01-04T09:59:22.18301+01:00 level=info msg="Executing migration" id="add index in alert_rule on org_id and title columns"
+logger=migrator t=2023-01-04T09:59:22.1879962+01:00 level=info msg="Executing migration" id="add index in alert_rule on org_id and uid columns"
+logger=migrator t=2023-01-04T09:59:22.1935111+01:00 level=info msg="Executing migration" id="add index in alert_rule on org_id, namespace_uid, group_uid columns"
+logger=migrator t=2023-01-04T09:59:22.1995465+01:00 level=info msg="Executing migration" id="alter alert_rule table data column to mediumtext in mysql"
+logger=migrator t=2023-01-04T09:59:22.2041979+01:00 level=info msg="Executing migration" id="add column for to alert_rule"
+logger=migrator t=2023-01-04T09:59:22.2107916+01:00 level=info msg="Executing migration" id="add column annotations to alert_rule"
+logger=migrator t=2023-01-04T09:59:22.2172916+01:00 level=info msg="Executing migration" id="add column labels to alert_rule"
+logger=migrator t=2023-01-04T09:59:22.226541+01:00 level=info msg="Executing migration" id="remove unique index from alert_rule on org_id, title columns"
+logger=migrator t=2023-01-04T09:59:22.2323121+01:00 level=info msg="Executing migration" id="add index in alert_rule on org_id, namespase_uid and title columns"
+logger=migrator t=2023-01-04T09:59:22.2372981+01:00 level=info msg="Executing migration" id="add dashboard_uid column to alert_rule"
+logger=migrator t=2023-01-04T09:59:22.2443102+01:00 level=info msg="Executing migration" id="add panel_id column to alert_rule"
+logger=migrator t=2023-01-04T09:59:22.2512982+01:00 level=info msg="Executing migration" id="add index in alert_rule on org_id, dashboard_uid and panel_id columns"
+logger=migrator t=2023-01-04T09:59:22.2568099+01:00 level=info msg="Executing migration" id="add rule_group_idx column to alert_rule"
+logger=migrator t=2023-01-04T09:59:22.263312+01:00 level=info msg="Executing migration" id="create alert_rule_version table"
+logger=migrator t=2023-01-04T09:59:22.2687973+01:00 level=info msg="Executing migration" id="add index in alert_rule_version table on rule_org_id, rule_uid and version columns"
+logger=migrator t=2023-01-04T09:59:22.2753123+01:00 level=info msg="Executing migration" id="add index in alert_rule_version table on rule_org_id, rule_namespace_uid and rule_group columns"
+logger=migrator t=2023-01-04T09:59:22.2802905+01:00 level=info msg="Executing migration" id="alter alert_rule_version table data column to mediumtext in mysql"
+logger=migrator t=2023-01-04T09:59:22.2852866+01:00 level=info msg="Executing migration" id="add column for to alert_rule_version"
+logger=migrator t=2023-01-04T09:59:22.2922899+01:00 level=info msg="Executing migration" id="add column annotations to alert_rule_version"
+logger=migrator t=2023-01-04T09:59:22.2982875+01:00 level=info msg="Executing migration" id="add column labels to alert_rule_version"
+logger=migrator t=2023-01-04T09:59:22.3037983+01:00 level=info msg="Executing migration" id="add rule_group_idx column to alert_rule_version"
+logger=migrator t=2023-01-04T09:59:22.3104778+01:00 level=info msg="Executing migration" id=create_alert_configuration_table
+logger=migrator t=2023-01-04T09:59:22.3165762+01:00 level=info msg="Executing migration" id="Add column default in alert_configuration"
+logger=migrator t=2023-01-04T09:59:22.3230093+01:00 level=info msg="Executing migration" id="alert alert_configuration alertmanager_configuration column from TEXT to MEDIUMTEXT if mysql"
+logger=migrator t=2023-01-04T09:59:22.3280098+01:00 level=info msg="Executing migration" id="add column org_id in alert_configuration"
+logger=migrator t=2023-01-04T09:59:22.3345222+01:00 level=info msg="Executing migration" id="add index in alert_configuration table on org_id column"
+logger=migrator t=2023-01-04T09:59:22.3410115+01:00 level=info msg="Executing migration" id="add configuration_hash column to alert_configuration"
+logger=migrator t=2023-01-04T09:59:22.3490148+01:00 level=info msg="Executing migration" id=create_ngalert_configuration_table
+logger=migrator t=2023-01-04T09:59:22.3550105+01:00 level=info msg="Executing migration" id="add index in ngalert_configuration on org_id column"
+logger=migrator t=2023-01-04T09:59:22.3605112+01:00 level=info msg="Executing migration" id="add column send_alerts_to in ngalert_configuration"
+logger=migrator t=2023-01-04T09:59:22.3682544+01:00 level=info msg="Executing migration" id="create provenance_type table"
+logger=migrator t=2023-01-04T09:59:22.373848+01:00 level=info msg="Executing migration" id="add index to uniquify (record_key, record_type, org_id) columns"
+logger=migrator t=2023-01-04T09:59:22.3803655+01:00 level=info msg="Executing migration" id="create alert_image table"
+logger=migrator t=2023-01-04T09:59:22.3853628+01:00 level=info msg="Executing migration" id="add unique index on token to alert_image table"
+logger=migrator t=2023-01-04T09:59:22.3913637+01:00 level=info msg="Executing migration" id="support longer URLs in alert_image table"
+logger=migrator t=2023-01-04T09:59:22.3965965+01:00 level=info msg="Executing migration" id="clear migration entry \"remove unified alerting data\""
+logger=migrator t=2023-01-04T09:59:22.3968637+01:00 level=info msg="Executing migration" id="move dashboard alerts to unified alerting"
+logger=migrator t=2023-01-04T09:59:22.3968637+01:00 level=info msg="alerts found to migrate" alerts=0
+logger=migrator t=2023-01-04T09:59:22.4018637+01:00 level=info msg="Executing migration" id="create library_element table v1"
+logger=migrator t=2023-01-04T09:59:22.4073632+01:00 level=info msg="Executing migration" id="add index library_element org_id-folder_id-name-kind"
+logger=migrator t=2023-01-04T09:59:22.4136615+01:00 level=info msg="Executing migration" id="create library_element_connection table v1"
+logger=migrator t=2023-01-04T09:59:22.4183633+01:00 level=info msg="Executing migration" id="add index library_element_connection element_id-kind-connection_id"
+logger=migrator t=2023-01-04T09:59:22.4238628+01:00 level=info msg="Executing migration" id="add unique index library_element org_id_uid"
+logger=migrator t=2023-01-04T09:59:22.4288762+01:00 level=info msg="Executing migration" id="increase max description length to 2048"
+logger=migrator t=2023-01-04T09:59:22.4338686+01:00 level=info msg="Executing migration" id="clone move dashboard alerts to unified alerting"
+logger=migrator t=2023-01-04T09:59:22.4393629+01:00 level=info msg="Executing migration" id="create data_keys table"
+logger=migrator t=2023-01-04T09:59:22.4447809+01:00 level=info msg="Executing migration" id="create secrets table"
+logger=migrator t=2023-01-04T09:59:22.4502971+01:00 level=info msg="Executing migration" id="rename data_keys name column to id"
+logger=migrator t=2023-01-04T09:59:22.4648427+01:00 level=info msg="Executing migration" id="add name column into data_keys"
+logger=migrator t=2023-01-04T09:59:22.4713374+01:00 level=info msg="Executing migration" id="copy data_keys id column values into name"
+logger=migrator t=2023-01-04T09:59:22.4763372+01:00 level=info msg="Executing migration" id="rename data_keys name column to label"
+logger=migrator t=2023-01-04T09:59:22.4908488+01:00 level=info msg="Executing migration" id="rename data_keys id column back to name"
+logger=migrator t=2023-01-04T09:59:22.5040403+01:00 level=info msg="Executing migration" id="create kv_store table v1"
+logger=migrator t=2023-01-04T09:59:22.5098495+01:00 level=info msg="Executing migration" id="add index kv_store.org_id-namespace-key"
+logger=migrator t=2023-01-04T09:59:22.5158455+01:00 level=info msg="Executing migration" id="update dashboard_uid and panel_id from existing annotations"
+logger=migrator t=2023-01-04T09:59:22.5208448+01:00 level=info msg="Executing migration" id="create permission table"
+logger=migrator t=2023-01-04T09:59:22.5263467+01:00 level=info msg="Executing migration" id="add unique index permission.role_id"
+logger=migrator t=2023-01-04T09:59:22.531846+01:00 level=info msg="Executing migration" id="add unique index role_id_action_scope"
+logger=migrator t=2023-01-04T09:59:22.5373451+01:00 level=info msg="Executing migration" id="create role table"
+logger=migrator t=2023-01-04T09:59:22.5438452+01:00 level=info msg="Executing migration" id="add column display_name"
+logger=migrator t=2023-01-04T09:59:22.5514547+01:00 level=info msg="Executing migration" id="add column group_name"
+logger=migrator t=2023-01-04T09:59:22.5584568+01:00 level=info msg="Executing migration" id="add index role.org_id"
+logger=migrator t=2023-01-04T09:59:22.5649558+01:00 level=info msg="Executing migration" id="add unique index role_org_id_name"
+logger=migrator t=2023-01-04T09:59:22.5729559+01:00 level=info msg="Executing migration" id="add index role_org_id_uid"
+logger=migrator t=2023-01-04T09:59:22.5800671+01:00 level=info msg="Executing migration" id="create team role table"
+logger=migrator t=2023-01-04T09:59:22.5866487+01:00 level=info msg="Executing migration" id="add index team_role.org_id"
+logger=migrator t=2023-01-04T09:59:22.5921701+01:00 level=info msg="Executing migration" id="add unique index team_role_org_id_team_id_role_id"
+logger=migrator t=2023-01-04T09:59:22.5970566+01:00 level=info msg="Executing migration" id="add index team_role.team_id"
+logger=migrator t=2023-01-04T09:59:22.6031946+01:00 level=info msg="Executing migration" id="create user role table"
+logger=migrator t=2023-01-04T09:59:22.6086945+01:00 level=info msg="Executing migration" id="add index user_role.org_id"
+logger=migrator t=2023-01-04T09:59:22.6141944+01:00 level=info msg="Executing migration" id="add unique index user_role_org_id_user_id_role_id"
+logger=migrator t=2023-01-04T09:59:22.6192001+01:00 level=info msg="Executing migration" id="add index user_role.user_id"
+logger=migrator t=2023-01-04T09:59:22.624369+01:00 level=info msg="Executing migration" id="create builtin role table"
+logger=migrator t=2023-01-04T09:59:22.6302926+01:00 level=info msg="Executing migration" id="add index builtin_role.role_id"
+logger=migrator t=2023-01-04T09:59:22.6358977+01:00 level=info msg="Executing migration" id="add index builtin_role.name"
+logger=migrator t=2023-01-04T09:59:22.6418975+01:00 level=info msg="Executing migration" id="Add column org_id to builtin_role table"
+logger=migrator t=2023-01-04T09:59:22.6478969+01:00 level=info msg="Executing migration" id="add index builtin_role.org_id"
+logger=migrator t=2023-01-04T09:59:22.6533819+01:00 level=info msg="Executing migration" id="add unique index builtin_role_org_id_role_id_role"
+logger=migrator t=2023-01-04T09:59:22.6578977+01:00 level=info msg="Executing migration" id="Remove unique index role_org_id_uid"
+logger=migrator t=2023-01-04T09:59:22.6679021+01:00 level=info msg="Executing migration" id="add unique index role.uid"
+logger=migrator t=2023-01-04T09:59:22.6738984+01:00 level=info msg="Executing migration" id="create seed assignment table"
+logger=migrator t=2023-01-04T09:59:22.6788983+01:00 level=info msg="Executing migration" id="add unique index builtin_role_role_name"
+logger=migrator t=2023-01-04T09:59:22.6846362+01:00 level=info msg="Executing migration" id="add column hidden to role table"
+logger=migrator t=2023-01-04T09:59:22.6911583+01:00 level=info msg="Executing migration" id="create query_history table v1"
+logger=migrator t=2023-01-04T09:59:22.6956585+01:00 level=info msg="Executing migration" id="add index query_history.org_id-created_by-datasource_uid"
+logger=migrator t=2023-01-04T09:59:22.700657+01:00 level=info msg="Executing migration" id="alter table query_history alter column created_by type to bigint"
+logger=migrator t=2023-01-04T09:59:22.7061602+01:00 level=info msg="Executing migration" id="teams permissions migration"
+logger=migrator t=2023-01-04T09:59:22.7111574+01:00 level=info msg="Executing migration" id="dashboard permissions"
+logger=migrator t=2023-01-04T09:59:22.7166835+01:00 level=info msg="Executing migration" id="dashboard permissions uid scopes"
+logger=migrator t=2023-01-04T09:59:22.7217765+01:00 level=info msg="Executing migration" id="drop managed folder create actions"
+logger=migrator t=2023-01-04T09:59:22.7268505+01:00 level=info msg="Executing migration" id="alerting notification permissions"
+logger=migrator t=2023-01-04T09:59:22.730786+01:00 level=info msg="Executing migration" id="create query_history_star table v1"
+logger=migrator t=2023-01-04T09:59:22.7362843+01:00 level=info msg="Executing migration" id="add index query_history.user_id-query_uid"
+logger=migrator t=2023-01-04T09:59:22.7417873+01:00 level=info msg="Executing migration" id="add column org_id in query_history_star"
+logger=migrator t=2023-01-04T09:59:22.7483988+01:00 level=info msg="Executing migration" id="alter table query_history_star_mig column user_id type to bigint"
+logger=migrator t=2023-01-04T09:59:22.7532899+01:00 level=info msg="Executing migration" id="create correlation table v1"
+logger=migrator t=2023-01-04T09:59:22.7582863+01:00 level=info msg="Executing migration" id="add index correlations.uid"
+logger=migrator t=2023-01-04T09:59:22.7637842+01:00 level=info msg="Executing migration" id="add index correlations.source_uid"
+logger=migrator t=2023-01-04T09:59:22.769786+01:00 level=info msg="Executing migration" id="add correlation config column"
+logger=migrator t=2023-01-04T09:59:22.7767998+01:00 level=info msg="Executing migration" id="create entity_events table"
+logger=migrator t=2023-01-04T09:59:22.7828237+01:00 level=info msg="Executing migration" id="create dashboard public config v1"
+logger=migrator t=2023-01-04T09:59:22.7886385+01:00 level=info msg="Executing migration" id="drop index UQE_dashboard_public_config_uid - v1"
+logger=migrator t=2023-01-04T09:59:22.7888396+01:00 level=warn msg="Skipping migration: Already executed, but not recorded in migration log" id="drop index UQE_dashboard_public_config_uid - v1"
+logger=migrator t=2023-01-04T09:59:22.7928388+01:00 level=info msg="Executing migration" id="drop index IDX_dashboard_public_config_org_id_dashboard_uid - v1"
+logger=migrator t=2023-01-04T09:59:22.7933401+01:00 level=warn msg="Skipping migration: Already executed, but not recorded in migration log" id="drop index IDX_dashboard_public_config_org_id_dashboard_uid - v1"
+logger=migrator t=2023-01-04T09:59:22.7978378+01:00 level=info msg="Executing migration" id="Drop old dashboard public config table"
+logger=migrator t=2023-01-04T09:59:22.8038405+01:00 level=info msg="Executing migration" id="recreate dashboard public config v1"
+logger=migrator t=2023-01-04T09:59:22.808839+01:00 level=info msg="Executing migration" id="create index UQE_dashboard_public_config_uid - v1"
+logger=migrator t=2023-01-04T09:59:22.8143383+01:00 level=info msg="Executing migration" id="create index IDX_dashboard_public_config_org_id_dashboard_uid - v1"
+logger=migrator t=2023-01-04T09:59:22.8195554+01:00 level=info msg="Executing migration" id="drop index UQE_dashboard_public_config_uid - v2"
+logger=migrator t=2023-01-04T09:59:22.8262527+01:00 level=info msg="Executing migration" id="drop index IDX_dashboard_public_config_org_id_dashboard_uid - v2"
+logger=migrator t=2023-01-04T09:59:22.8312579+01:00 level=info msg="Executing migration" id="Drop public config table"
+logger=migrator t=2023-01-04T09:59:22.8370334+01:00 level=info msg="Executing migration" id="Recreate dashboard public config v2"
+logger=migrator t=2023-01-04T09:59:22.842275+01:00 level=info msg="Executing migration" id="create index UQE_dashboard_public_config_uid - v2"
+logger=migrator t=2023-01-04T09:59:22.8472745+01:00 level=info msg="Executing migration" id="create index IDX_dashboard_public_config_org_id_dashboard_uid - v2"
+logger=migrator t=2023-01-04T09:59:22.8532738+01:00 level=info msg="Executing migration" id="create index UQE_dashboard_public_config_access_token - v2"
+logger=migrator t=2023-01-04T09:59:22.8584117+01:00 level=info msg="Executing migration" id="Rename table dashboard_public_config to dashboard_public - v2"
+logger=migrator t=2023-01-04T09:59:22.8704756+01:00 level=info msg="Executing migration" id="add annotations_enabled column"
+logger=migrator t=2023-01-04T09:59:22.8762839+01:00 level=info msg="Executing migration" id="create default alerting folders"
+logger=migrator t=2023-01-04T09:59:22.8812851+01:00 level=info msg="Executing migration" id="create file table"
+logger=migrator t=2023-01-04T09:59:22.8867855+01:00 level=info msg="Executing migration" id="file table idx: path natural pk"
+logger=migrator t=2023-01-04T09:59:22.8924031+01:00 level=info msg="Executing migration" id="file table idx: parent_folder_path_hash fast folder retrieval"
+logger=migrator t=2023-01-04T09:59:22.8972856+01:00 level=info msg="Executing migration" id="create file_meta table"
+logger=migrator t=2023-01-04T09:59:22.9017874+01:00 level=info msg="Executing migration" id="file table idx: path key"
+logger=migrator t=2023-01-04T09:59:22.9077849+01:00 level=info msg="Executing migration" id="set path collation in file table"
+logger=migrator t=2023-01-04T09:59:22.9122851+01:00 level=info msg="Executing migration" id="managed permissions migration"
+logger=migrator t=2023-01-04T09:59:22.9167839+01:00 level=info msg="Executing migration" id="managed folder permissions alert actions migration"
+logger=migrator t=2023-01-04T09:59:22.9222862+01:00 level=info msg="Executing migration" id="RBAC action name migrator"
+logger=migrator t=2023-01-04T09:59:22.9267839+01:00 level=info msg="Executing migration" id="Add UID column to playlist"
+logger=migrator t=2023-01-04T09:59:22.9337855+01:00 level=info msg="Executing migration" id="Update uid column values in playlist"
+logger=migrator t=2023-01-04T09:59:22.9385741+01:00 level=info msg="Executing migration" id="Add index for uid in playlist"
+logger=migrator t=2023-01-04T09:59:22.9447491+01:00 level=info msg="Executing migration" id="update group index for alert rules"
+logger=migrator t=2023-01-04T09:59:22.9490918+01:00 level=info msg="Executing migration" id="managed folder permissions alert actions repeated migration"
+logger=migrator t=2023-01-04T09:59:22.9545921+01:00 level=info msg="Executing migration" id="admin only folder/dashboard permission"
+logger=migrator t=2023-01-04T09:59:22.9595917+01:00 level=info msg="Executing migration" id="add action column to seed_assignment"
+logger=migrator t=2023-01-04T09:59:22.9655909+01:00 level=info msg="Executing migration" id="add scope column to seed_assignment"
+logger=migrator t=2023-01-04T09:59:22.9717011+01:00 level=info msg="Executing migration" id="remove unique index builtin_role_role_name before nullable update"
+logger=migrator t=2023-01-04T09:59:22.9766196+01:00 level=info msg="Executing migration" id="update seed_assignment role_name column to nullable"
+logger=migrator t=2023-01-04T09:59:23.0012232+01:00 level=info msg="Executing migration" id="add unique index builtin_role_name back"
+logger=migrator t=2023-01-04T09:59:23.0070347+01:00 level=info msg="Executing migration" id="add unique index builtin_role_action_scope"
+logger=migrator t=2023-01-04T09:59:23.0115585+01:00 level=info msg="Executing migration" id="add primary key to seed_assigment"
+logger=migrator t=2023-01-04T09:59:23.0245879+01:00 level=info msg="Executing migration" id="managed folder permissions alert actions repeated fixed migration"
+logger=migrator t=2023-01-04T09:59:23.0295878+01:00 level=info msg="Executing migration" id="migrate external alertmanagers to datsourcse"
+logger=migrator t=2023-01-04T09:59:23.0345876+01:00 level=info msg="Executing migration" id="create data_source_usage_by_day table"
+logger=migrator t=2023-01-04T09:59:23.0395882+01:00 level=info msg="Executing migration" id="create data_source_usage_by_day(data_source_id) index"
+logger=migrator t=2023-01-04T09:59:23.0455875+01:00 level=info msg="Executing migration" id="create data_source_usage_by_day(data_source_id, day) unique index"
+logger=migrator t=2023-01-04T09:59:23.0506295+01:00 level=info msg="Executing migration" id="create dashboard_usage_by_day table"
+logger=migrator t=2023-01-04T09:59:23.0561432+01:00 level=info msg="Executing migration" id="create dashboard_usage_sums table"
+logger=migrator t=2023-01-04T09:59:23.0606417+01:00 level=info msg="Executing migration" id="create dashboard_usage_by_day(dashboard_id) index"
+logger=migrator t=2023-01-04T09:59:23.0666434+01:00 level=info msg="Executing migration" id="create dashboard_usage_by_day(dashboard_id, day) index"
+logger=migrator t=2023-01-04T09:59:23.0721429+01:00 level=info msg="Executing migration" id="add column errors_last_1_days to dashboard_usage_sums"
+logger=migrator t=2023-01-04T09:59:23.0781433+01:00 level=info msg="Executing migration" id="add column errors_last_7_days to dashboard_usage_sums"
+logger=migrator t=2023-01-04T09:59:23.0847825+01:00 level=info msg="Executing migration" id="add column errors_last_30_days to dashboard_usage_sums"
+logger=migrator t=2023-01-04T09:59:23.0919779+01:00 level=info msg="Executing migration" id="add column errors_total to dashboard_usage_sums"
+logger=migrator t=2023-01-04T09:59:23.0993002+01:00 level=info msg="Executing migration" id="create dashboard_public_usage_by_day table"
+logger=migrator t=2023-01-04T09:59:23.1044275+01:00 level=info msg="Executing migration" id="add column cached_queries to dashboard_usage_by_day table"
+logger=migrator t=2023-01-04T09:59:23.1113013+01:00 level=info msg="Executing migration" id="add column cached_queries to dashboard_public_usage_by_day table"
+logger=migrator t=2023-01-04T09:59:23.1183008+01:00 level=info msg="Executing migration" id="create user_dashboard_views table"
+logger=migrator t=2023-01-04T09:59:23.1232318+01:00 level=info msg="Executing migration" id="add index user_dashboard_views.user_id"
+logger=migrator t=2023-01-04T09:59:23.1287575+01:00 level=info msg="Executing migration" id="add index user_dashboard_views.dashboard_id"
+logger=migrator t=2023-01-04T09:59:23.1342907+01:00 level=info msg="Executing migration" id="add unique index user_dashboard_views_user_id_dashboard_id"
+logger=migrator t=2023-01-04T09:59:23.1397896+01:00 level=info msg="Executing migration" id="create user_stats table"
+logger=migrator t=2023-01-04T09:59:23.1447912+01:00 level=info msg="Executing migration" id="add unique index user_stats(user_id)"
+logger=migrator t=2023-01-04T09:59:23.1507903+01:00 level=info msg="Executing migration" id="create data_source_cache table"
+logger=migrator t=2023-01-04T09:59:23.1562912+01:00 level=info msg="Executing migration" id="add index data_source_cache.data_source_id"
+logger=migrator t=2023-01-04T09:59:23.1607907+01:00 level=info msg="Executing migration" id="add use_default_ttl column"
+logger=migrator t=2023-01-04T09:59:23.1688003+01:00 level=info msg="Executing migration" id="add data_source_cache.data_source_uid column"
+logger=migrator t=2023-01-04T09:59:23.176296+01:00 level=info msg="Executing migration" id="remove abandoned data_source_cache records"
+logger=migrator t=2023-01-04T09:59:23.1808+01:00 level=info msg="Executing migration" id="update data_source_cache.data_source_uid value"
+logger=migrator t=2023-01-04T09:59:23.1863968+01:00 level=info msg="Executing migration" id="add index data_source_cache.data_source_uid"
+logger=migrator t=2023-01-04T09:59:23.1923693+01:00 level=info msg="Executing migration" id="add data_source_cache.ttl_resources_ms column"
+logger=migrator t=2023-01-04T09:59:23.1989071+01:00 level=info msg="Executing migration" id="update data_source_cache.ttl_resources_ms to have the same value as ttl_ms"
+logger=migrator t=2023-01-04T09:59:23.2034076+01:00 level=info msg="Executing migration" id="create data_source_acl table"
+logger=migrator t=2023-01-04T09:59:23.2084055+01:00 level=info msg="Executing migration" id="add index data_source_acl.data_source_id"
+logger=migrator t=2023-01-04T09:59:23.2138397+01:00 level=info msg="Executing migration" id="add unique index datasource_acl.unique"
+logger=migrator t=2023-01-04T09:59:23.2199067+01:00 level=info msg="Executing migration" id="create license_token table"
+logger=migrator t=2023-01-04T09:59:23.224906+01:00 level=info msg="Executing migration" id="drop recorded_queries table v14"
+logger=migrator t=2023-01-04T09:59:23.2299071+01:00 level=info msg="Executing migration" id="drop recording_rules table v14"
+logger=migrator t=2023-01-04T09:59:23.2349066+01:00 level=info msg="Executing migration" id="create recording_rules table v14"
+logger=migrator t=2023-01-04T09:59:23.2404073+01:00 level=info msg="Executing migration" id="create remote_write_targets table v1"
+logger=migrator t=2023-01-04T09:59:23.2460048+01:00 level=info msg="Executing migration" id="Add prom_name to recording_rules table"
+logger=migrator t=2023-01-04T09:59:23.2537178+01:00 level=info msg="Executing migration" id="ensure remote_write_targets table"
+logger=migrator t=2023-01-04T09:59:23.2575194+01:00 level=info msg="Executing migration" id="create report config table v1"
+logger=migrator t=2023-01-04T09:59:23.26352+01:00 level=info msg="Executing migration" id="Add index report.user_id"
+logger=migrator t=2023-01-04T09:59:23.2680188+01:00 level=info msg="Executing migration" id="add index to dashboard_id"
+logger=migrator t=2023-01-04T09:59:23.2740207+01:00 level=info msg="Executing migration" id="add index to org_id"
+logger=migrator t=2023-01-04T09:59:23.2790203+01:00 level=info msg="Executing migration" id="Add timezone to the report"
+logger=migrator t=2023-01-04T09:59:23.286046+01:00 level=info msg="Executing migration" id="Add time_from to the report"
+logger=migrator t=2023-01-04T09:59:23.2942695+01:00 level=info msg="Executing migration" id="Add time_to to the report"
+logger=migrator t=2023-01-04T09:59:23.3005756+01:00 level=info msg="Executing migration" id="Add PDF landscape option to the report"
+logger=migrator t=2023-01-04T09:59:23.3080729+01:00 level=info msg="Executing migration" id="Add monthly day scheduling option to the report"
+logger=migrator t=2023-01-04T09:59:23.3160822+01:00 level=info msg="Executing migration" id="Add PDF layout option to the report"
+logger=migrator t=2023-01-04T09:59:23.3225846+01:00 level=info msg="Executing migration" id="Add PDF orientation option to the report"
+logger=migrator t=2023-01-04T09:59:23.3311901+01:00 level=info msg="Executing migration" id="Update report pdf_orientation from pdf_landscape"
+logger=migrator t=2023-01-04T09:59:23.3363142+01:00 level=info msg="Executing migration" id="create report settings table"
+logger=migrator t=2023-01-04T09:59:23.3413116+01:00 level=info msg="Executing migration" id="Add dashboard_uid field to the report"
+logger=migrator t=2023-01-04T09:59:23.3488365+01:00 level=info msg="Executing migration" id="Add template_vars field to the report"
+logger=migrator t=2023-01-04T09:59:23.3563363+01:00 level=info msg="Executing migration" id="Add option to include dashboard url in the report"
+logger=migrator t=2023-01-04T09:59:23.3638425+01:00 level=info msg="Executing migration" id="Add state field to the report"
+logger=migrator t=2023-01-04T09:59:23.3703378+01:00 level=info msg="Executing migration" id="Add option to add CSV files to the report"
+logger=migrator t=2023-01-04T09:59:23.3769687+01:00 level=info msg="Executing migration" id="Add scheduling start date"
+logger=migrator t=2023-01-04T09:59:23.384337+01:00 level=info msg="Executing migration" id="Add missing schedule_start date for old reports"
+logger=migrator t=2023-01-04T09:59:23.389837+01:00 level=info msg="Executing migration" id="Add scheduling end date"
+logger=migrator t=2023-01-04T09:59:23.3964269+01:00 level=info msg="Executing migration" id="Add schedulinng custom interval frequency"
+logger=migrator t=2023-01-04T09:59:23.4054242+01:00 level=info msg="Executing migration" id="Add scheduling custom interval amount"
+logger=migrator t=2023-01-04T09:59:23.4114447+01:00 level=info msg="Executing migration" id="Add workdays only flag to report"
+logger=migrator t=2023-01-04T09:59:23.4184465+01:00 level=info msg="Executing migration" id="create report dashboards table"
+logger=migrator t=2023-01-04T09:59:23.4240221+01:00 level=info msg="Executing migration" id="Add index report_dashboards.report_id"
+logger=migrator t=2023-01-04T09:59:23.4294443+01:00 level=info msg="Executing migration" id="Migrate report fields into report_dashboards"
+logger=migrator t=2023-01-04T09:59:23.4339624+01:00 level=info msg="Executing migration" id="Add formats option to the report"
+logger=migrator t=2023-01-04T09:59:23.4409903+01:00 level=info msg="Executing migration" id="Migrate reports with csv enabled"
+logger=migrator t=2023-01-04T09:59:23.4453405+01:00 level=info msg="Executing migration" id="Migrate ancient reports"
+logger=migrator t=2023-01-04T09:59:23.4502156+01:00 level=info msg="Executing migration" id="Add created column in report_dashboards"
+logger=migrator t=2023-01-04T09:59:23.457007+01:00 level=info msg="Executing migration" id="Add scale_factor to the report"
+logger=migrator t=2023-01-04T09:59:23.4635025+01:00 level=info msg="Executing migration" id="create team group table"
+logger=migrator t=2023-01-04T09:59:23.4695047+01:00 level=info msg="Executing migration" id="add index team_group.org_id"
+logger=migrator t=2023-01-04T09:59:23.474501+01:00 level=info msg="Executing migration" id="add unique index team_group.org_id_team_id_group_id"
+logger=migrator t=2023-01-04T09:59:23.4805035+01:00 level=info msg="Executing migration" id="add index team_group.group_id"
+logger=migrator t=2023-01-04T09:59:23.4855062+01:00 level=info msg="Executing migration" id="create settings table"
+logger=migrator t=2023-01-04T09:59:23.4905028+01:00 level=info msg="Executing migration" id="add unique index settings.section_key"
+logger=migrator t=2023-01-04T09:59:23.4962331+01:00 level=info msg="Executing migration" id="migrate role names"
+logger=migrator t=2023-01-04T09:59:23.5040035+01:00 level=info msg="Executing migration" id="rename orgs roles"
+logger=migrator t=2023-01-04T09:59:23.5095064+01:00 level=info msg="Executing migration" id="remove duplicated org role"
+logger=migrator t=2023-01-04T09:59:23.5160064+01:00 level=info msg="Executing migration" id="migrate alerting role names"
+logger=migrator t=2023-01-04T09:59:23.5225033+01:00 level=info msg="Executing migration" id="data source permissions"
+logger=migrator t=2023-01-04T09:59:23.5270526+01:00 level=info msg="Executing migration" id="data source uid permissions"
+logger=migrator t=2023-01-04T09:59:23.5321418+01:00 level=info msg="Executing migration" id="rename permissions:delegate scope"
+logger=migrator t=2023-01-04T09:59:23.536575+01:00 level=info msg="Executing migration" id="builtin role migration"
+logger="builtin-role migrator" t=2023-01-04T09:59:23.5380772+01:00 level=info msg="no permission to create"
+logger=migrator t=2023-01-04T09:59:23.5425737+01:00 level=info msg="Executing migration" id="seed permissions migration"
+logger=migrator t=2023-01-04T09:59:23.5470752+01:00 level=info msg="Executing migration" id="managed permissions migration enterprise"
+logger=migrator t=2023-01-04T09:59:23.5515745+01:00 level=info msg="migrations completed" performed=555 skipped=0 duration=3.1089061s
+logger=sqlstore t=2023-01-04T09:59:23.5625769+01:00 level=info msg="Created default admin" user=admin
+logger=sqlstore t=2023-01-04T09:59:23.5625769+01:00 level=info msg="Created default organization"
+logger=licensing t=2023-01-04T09:59:23.568077+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=plugin.loader t=2023-01-04T09:59:23.7851495+01:00 level=info msg="Plugin registered" pluginID=input
+logger=plugin.finder t=2023-01-04T09:59:23.7851495+01:00 level=warn msg="Skipping finding plugins as directory does not exist" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=secrets t=2023-01-04T09:59:23.7861626+01:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=query_data t=2023-01-04T09:59:23.8413006+01:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2023-01-04T09:59:23.8453108+01:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2023-01-04T09:59:24.051497+01:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2023-01-04T09:59:24.0615114+01:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2023-01-04T09:59:24.0615114+01:00 level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2023-01-04T09:59:24.0620126+01:00 level=info msg="storage starting"
+logger=ngalert.state.manager t=2023-01-04T09:59:24.0620126+01:00 level=info msg="Warming state cache for startup"
+logger=report t=2023-01-04T09:59:24.0625196+01:00 level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=http.server t=2023-01-04T09:59:24.0990243+01:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=sqlstore.transactions t=2023-01-04T09:59:24.1000244+01:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=ngalert.state.manager t=2023-01-04T09:59:24.1280244+01:00 level=info msg="State cache has been initialized" states=0 duration=66.0118ms
+logger=ticker t=2023-01-04T09:59:24.1280244+01:00 level=info msg=starting first_tick=2023-01-04T09:59:30+01:00
+logger=ngalert.multiorg.alertmanager t=2023-01-04T09:59:24.1280244+01:00 level=info msg="starting MultiOrg Alertmanager"
+logger=http.server t=2023-01-04T10:00:32.2572532+01:00 level=info msg="Successful Login" User=admin@localhost
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:00:44.7798893+01:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=1 duration=1.5177ms size=0 referer= handler=/api/live/ws
+logger=datasources t=2023-01-04T10:01:54.453857+01:00 level=error msg="Failed to validate URL" url=
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:01:54.453857+01:00 level=error msg="Validation error, invalid URL" error="validation of data source URL \"\" failed: empty URL string" remote_addr=[::1] traceID=
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:01:54.453857+01:00 level=info msg="Request Completed" method=PUT path=/api/datasources/uid/WIehURh4z status=400 remote_addr=[::1] time_ms=3 duration=3.0187ms size=56 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/uid/:uid
+logger=tsdb.influxdb t=2023-01-04T10:02:09.7880498+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:02:09.7885461+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.4794ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:02:22.9048423+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:02:22.9053469+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.9865ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:05:49.9894155+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:05:49.98995+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.089ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:05:51.0153021+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:05:51.0153021+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=11 duration=11.5056ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:06:47.1338364+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:06:47.1338364+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=2 duration=2.9922ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:06:47.3371412+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:06:47.3371412+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:06:47.9236917+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:06:47.9236917+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=2 duration=2.4941ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:06:52.3817695+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:06:52.3822659+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.998ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:06:57.8329275+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:06:57.8334304+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=2 duration=2.993ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:07:28.3855232+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:07:28.3855232+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.0046ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:07:29.2273094+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:07:29.2273094+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5003ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:07:51.8892618+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:07:51.8897721+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.4887ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:07:52.7000977+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:07:52.7005871+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.4891ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:07:52.8801329+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:07:52.8806325+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.505ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:07:53.0830926+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:07:53.0835937+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5014ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:07:53.3070393+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:07:53.307538+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.4961ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:07:56.1227869+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:07:56.1227869+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.0075ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=cleanup t=2023-01-04T10:09:24.2031357+01:00 level=info msg="Completed cleanup jobs" duration=18.4972ms
+logger=tsdb.influxdb t=2023-01-04T10:10:57.1909119+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:10:57.1914106+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=5 duration=5.017ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:11:11.8956404+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:11:11.8961405+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.0003ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:12:37.1891738+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:12:37.1896677+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.4864ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=sqlstore.transactions t=2023-01-04T10:14:24.0477031+01:00 level=info msg="Database locked, sleeping then retrying" error="database is locked" retry=0 code="database is locked"
+logger=tsdb.influxdb t=2023-01-04T10:14:53.9811565+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:14:53.9816535+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.0073ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:14:56.0547053+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:14:56.0551932+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.9887ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:14:57.8471432+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:14:57.8476446+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.0031ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:15:05.1853122+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:15:05.1853122+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=2 duration=2.9857ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:15:09.7545691+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:15:09.7550784+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5094ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:16:05.8813765+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:16:05.8813765+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.9851ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:16:06.6872826+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:16:06.6873725+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.09ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:16:06.873521+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:16:06.8740056+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.9933ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:16:07.1075741+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:16:07.1080947+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.0399ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:16:07.3037348+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:16:07.3042285+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=5 duration=5.4946ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:16:07.5098022+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:16:07.5103101+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.0152ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:17:25.2947137+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:17:25.2952087+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5009ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:17:26.2415951+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:17:26.2415951+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.0022ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:17:26.4548529+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:17:26.4553711+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.5075ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=cleanup t=2023-01-04T10:19:24.3214881+01:00 level=info msg="Completed cleanup jobs" duration=12.4807ms
+logger=tsdb.influxdb t=2023-01-04T10:19:33.3149533+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:19:33.3154452+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.046ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:19:34.6068915+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:19:34.6068915+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5034ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:20:56.7117735+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:20:56.7122083+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5007ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:01.665235+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:01.6657356+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.003ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:05.6168857+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:05.6168857+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.494ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:18.0242937+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:18.0242937+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=10 duration=10.0016ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:18.4328218+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:18.4333136+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.4929ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:19.1325445+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:19.1325445+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5217ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:19.4143514+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:19.4148493+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.4867ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:19.9528299+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:19.9528299+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.0089ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:20.3058214+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:20.3058214+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5006ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:20.4887426+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:20.4887426+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.4828ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:34.1085435+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:34.1090527+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.4924ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:47.8464519+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:47.8464519+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.4849ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:58.2576715+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:58.2576715+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=2 duration=2.9972ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:59.2150828+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:59.2155958+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=2 duration=2.9993ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:59.4533858+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:59.4533858+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=2 duration=2.5173ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:59.701846+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:59.7023338+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.4998ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:21:59.9299063+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:21:59.9299063+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5059ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:22:00.1374429+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:22:00.1374429+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5035ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:22:09.2680405+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:22:09.2680405+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.0116ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:22:14.3598081+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:22:14.3598081+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5111ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:22:18.6677888+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:22:18.6677888+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.0048ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:22:19.3125329+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:22:19.3130316+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5085ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:22:19.4957581+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:22:19.4962762+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.0006ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:22:19.7030221+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:22:19.7035245+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5106ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:22:38.6898196+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:22:38.6898196+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.0207ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:23:25.3418161+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:23:25.3418161+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.0035ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:23:25.5555767+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:23:25.5555767+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.4967ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:23:26.1104869+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:23:26.1104869+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.0872ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:23:26.3110115+01:00 level=warn msg="error performing influxdb healthcheck" err="error connecting influxDB influxQL"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:23:26.3110115+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=2 duration=2.9899ms size=66 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:23:40.1551498+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:23:40.1551498+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=2 duration=2.9938ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:23:41.3201005+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:23:41.3201005+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.0212ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:23:41.507177+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:23:41.507177+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=2 duration=2.988ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:25:25.3782769+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:25:25.3782769+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=2 duration=2.4963ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:25:36.6387526+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:25:36.6392492+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.5044ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:25:37.3880716+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:25:37.3880716+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.001ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:25:37.5983346+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:25:37.5988531+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.4978ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:25:44.6130081+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:25:44.613503+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.0006ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:29:04.2430092+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:29:04.2435644+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=167 duration=167.5059ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:29:06.0334539+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:29:06.0339717+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=97 duration=97.3612ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:29:06.2646016+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:29:06.2650893+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=89 duration=89.9119ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:29:06.4384389+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:29:06.4389343+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=89 duration=89.4961ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:29:06.6149361+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:29:06.6154418+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=88 duration=88.6058ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:29:06.7978436+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:29:06.7983366+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=92 duration=92.5114ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:29:06.9922968+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:29:06.9927945+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=87 duration=87.5102ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:29:07.2182484+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:29:07.2186917+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=94 duration=94.4372ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=cleanup t=2023-01-04T10:29:24.4162953+01:00 level=info msg="Completed cleanup jobs" duration=12.2842ms
+logger=tsdb.influxdb t=2023-01-04T10:30:45.7096126+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:30:45.710127+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5057ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:34:27.5155419+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:34:27.5160634+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5038ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=cleanup t=2023-01-04T10:39:24.4979901+01:00 level=info msg="Completed cleanup jobs" duration=12.595ms
+logger=tsdb.influxdb t=2023-01-04T10:39:38.9314441+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:39:38.9314441+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=5 duration=5.13ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:43:01.9674534+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:43:01.9674534+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.9981ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=tsdb.influxdb t=2023-01-04T10:47:34.188535+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:47:34.1890435+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=4 duration=4.9995ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/1/query remote_addr=[::1] referer="http://localhost:3000/explore?orgId=1&left=%7B%22datasource%22:%22WIehURh4z%22,%22queries%22:%5B%7B%22refId%22:%22A%22,%22datasource%22:%7B%22type%22:%22influxdb%22,%22uid%22:%22WIehURh4z%22%7D%7D%5D,%22range%22:%7B%22from%22:%22now-1h%22,%22to%22:%22now%22%7D%7D" t=2023-01-04T10:47:48.1930728+01:00 level=info msg="Authentication to data source failed" body="{\"code\":\"unauthorized\",\"message\":\"unauthorized access\"}" statusCode=401
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:47:48.1935729+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/proxy/1/query status=400 remote_addr=[::1] time_ms=11 duration=11.492ms size=36 referer="http://localhost:3000/explore?left=%7B%22datasource%22%3A%22WIehURh4z%22%2C%22queries%22%3A%5B%7B%22refId%22%3A%22A%22%2C%22datasource%22%3A%7B%22type%22%3A%22influxdb%22%2C%22uid%22%3A%22WIehURh4z%22%7D%7D%5D%2C%22range%22%3A%7B%22from%22%3A%22now-1h%22%2C%22to%22%3A%22now%22%7D%7D&orgId=1" handler=/api/datasources/proxy/:id/*
+logger=cleanup t=2023-01-04T10:49:24.5633531+01:00 level=info msg="Completed cleanup jobs" duration=9.0559ms
+logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/1/query remote_addr=[::1] referer="http://localhost:3000/explore?orgId=1&left=%7B%22datasource%22:%22WIehURh4z%22,%22queries%22:%5B%7B%22refId%22:%22A%22,%22datasource%22:%7B%22type%22:%22influxdb%22,%22uid%22:%22WIehURh4z%22%7D%7D%5D,%22range%22:%7B%22from%22:%22now-1h%22,%22to%22:%22now%22%7D%7D" t=2023-01-04T10:51:04.7127057+01:00 level=info msg="Authentication to data source failed" body="{\"code\":\"unauthorized\",\"message\":\"unauthorized access\"}" statusCode=401
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:51:04.7132064+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/proxy/1/query status=400 remote_addr=[::1] time_ms=5 duration=5.0083ms size=36 referer="http://localhost:3000/explore?left=%7B%22datasource%22%3A%22WIehURh4z%22%2C%22queries%22%3A%5B%7B%22refId%22%3A%22A%22%2C%22datasource%22%3A%7B%22type%22%3A%22influxdb%22%2C%22uid%22%3A%22WIehURh4z%22%7D%7D%5D%2C%22range%22%3A%7B%22from%22%3A%22now-1h%22%2C%22to%22%3A%22now%22%7D%7D&orgId=1" handler=/api/datasources/proxy/:id/*
+logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/1/query remote_addr=[::1] referer="http://localhost:3000/explore?orgId=1&left=%7B%22datasource%22:%22WIehURh4z%22,%22queries%22:%5B%7B%22refId%22:%22A%22,%22datasource%22:%7B%22type%22:%22influxdb%22,%22uid%22:%22WIehURh4z%22%7D%7D%5D,%22range%22:%7B%22from%22:%22now-1h%22,%22to%22:%22now%22%7D%7D" t=2023-01-04T10:55:16.179348+01:00 level=info msg="Authentication to data source failed" body="{\"code\":\"unauthorized\",\"message\":\"unauthorized access\"}" statusCode=401
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:55:16.1798456+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/proxy/1/query status=400 remote_addr=[::1] time_ms=5 duration=5.5007ms size=36 referer="http://localhost:3000/explore?left=%7B%22datasource%22%3A%22WIehURh4z%22%2C%22queries%22%3A%5B%7B%22refId%22%3A%22A%22%2C%22datasource%22%3A%7B%22type%22%3A%22influxdb%22%2C%22uid%22%3A%22WIehURh4z%22%7D%7D%5D%2C%22range%22%3A%7B%22from%22%3A%22now-1h%22%2C%22to%22%3A%22now%22%7D%7D&orgId=1" handler=/api/datasources/proxy/:id/*
+logger=tsdb.influxdb t=2023-01-04T10:58:13.0747782+01:00 level=warn msg="error performing influxdb healthcheck" err="error reading InfluxDB. Status Code: 401"
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T10:58:13.0747782+01:00 level=info msg="Request Completed" method=GET path=/api/datasources/1/health status=400 remote_addr=[::1] time_ms=3 duration=3.5078ms size=72 referer=http://localhost:3000/datasources/edit/WIehURh4z handler=/api/datasources/:id/health
+logger=licensing t=2023-01-04T10:59:24.6191235+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2023-01-04T10:59:24.6196265+01:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\Program Files\\GrafanaLabs\\grafana\\data\\license.jwt"
+logger=cleanup t=2023-01-04T10:59:24.6261043+01:00 level=info msg="Completed cleanup jobs" duration=19.9807ms
+logger=cleanup t=2023-01-04T11:09:24.6653948+01:00 level=info msg="Completed cleanup jobs" duration=12.3314ms
+logger=cleanup t=2023-01-04T11:19:24.6969892+01:00 level=info msg="Completed cleanup jobs" duration=9.1517ms
+logger=cleanup t=2023-01-04T11:29:24.7273027+01:00 level=info msg="Completed cleanup jobs" duration=8.4909ms
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T11:32:31.9369808+01:00 level=info msg="Request Completed" method=GET path=/api/test status=404 remote_addr=[::1] time_ms=2 duration=2.499ms size=24 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T11:32:32.0330272+01:00 level=info msg="Request Completed" method=GET path=/favicon.ico status=404 remote_addr=[::1] time_ms=5 duration=5.9969ms size=40399 referer=http://localhost:3000/api/test handler=public-assets
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T11:32:36.0138719+01:00 level=info msg="Request Completed" method=GET path=/api/testa status=404 remote_addr=[::1] time_ms=1 duration=1.4987ms size=24 referer= handler=notfound
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T11:33:15.6918667+01:00 level=info msg="Request Completed" method=GET path=/api/dashboards/homeh status=404 remote_addr=[::1] time_ms=1 duration=1.5077ms size=24 referer= handler=notfound
+logger=cleanup t=2023-01-04T11:39:24.7557912+01:00 level=info msg="Completed cleanup jobs" duration=11.9322ms
+logger=cleanup t=2023-01-04T11:49:24.7746549+01:00 level=info msg="Completed cleanup jobs" duration=10.5158ms
+logger=cleanup t=2023-01-04T11:59:24.7965472+01:00 level=info msg="Completed cleanup jobs" duration=14.8358ms
+logger=licensing t=2023-01-04T11:59:24.7970483+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2023-01-04T11:59:24.7970483+01:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\Program Files\\GrafanaLabs\\grafana\\data\\license.jwt"
+logger=licensing t=2023-01-04T13:27:59.8811861+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2023-01-04T13:27:59.8816885+01:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\Program Files\\GrafanaLabs\\grafana\\data\\license.jwt"
+logger=cleanup t=2023-01-04T13:27:59.9242067+01:00 level=info msg="Completed cleanup jobs" duration=153.5196ms
+logger=context userId=1 orgId=1 uname=admin t=2023-01-04T13:28:02.6721598+01:00 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=[::1] time_ms=746 duration=746.5301ms size=0 referer= handler=/api/live/ws
+logger=cleanup t=2023-01-04T13:29:24.7936022+01:00 level=info msg="Completed cleanup jobs" duration=2.9915ms
+logger=cleanup t=2023-01-04T13:39:24.8028639+01:00 level=info msg="Completed cleanup jobs" duration=12.4975ms
+logger=cleanup t=2023-01-04T13:49:24.8000514+01:00 level=info msg="Completed cleanup jobs" duration=9.0178ms
+logger=licensing t=2023-01-04T13:59:24.790776+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2023-01-04T13:59:24.790776+01:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\Program Files\\GrafanaLabs\\grafana\\data\\license.jwt"
+logger=cleanup t=2023-01-04T13:59:24.8297739+01:00 level=info msg="Completed cleanup jobs" duration=38.9979ms
+logger=cleanup t=2023-01-04T14:09:24.8030925+01:00 level=info msg="Completed cleanup jobs" duration=11.4871ms
+logger=cleanup t=2023-01-04T14:19:24.8020407+01:00 level=info msg="Completed cleanup jobs" duration=11.0041ms
+logger=cleanup t=2023-01-04T14:29:24.7995846+01:00 level=info msg="Completed cleanup jobs" duration=8.9382ms
+logger=cleanup t=2023-01-04T14:39:24.7998778+01:00 level=info msg="Completed cleanup jobs" duration=9.5266ms
+logger=cleanup t=2023-01-04T14:49:24.8010211+01:00 level=info msg="Completed cleanup jobs" duration=9.9841ms
+logger=licensing t=2023-01-04T14:59:24.7915027+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2023-01-04T14:59:24.7915027+01:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\Program Files\\GrafanaLabs\\grafana\\data\\license.jwt"
+logger=cleanup t=2023-01-04T14:59:24.8064838+01:00 level=info msg="Completed cleanup jobs" duration=15.9803ms
+logger=cleanup t=2023-01-04T15:09:24.8021063+01:00 level=info msg="Completed cleanup jobs" duration=11.0312ms
+logger=cleanup t=2023-01-04T15:19:24.8000849+01:00 level=info msg="Completed cleanup jobs" duration=9.0016ms
+logger=cleanup t=2023-01-04T15:29:24.7984573+01:00 level=info msg="Completed cleanup jobs" duration=7.9947ms
+logger=cleanup t=2023-01-04T15:39:24.8027274+01:00 level=info msg="Completed cleanup jobs" duration=11.993ms
+logger=cleanup t=2023-01-04T15:49:24.800913+01:00 level=info msg="Completed cleanup jobs" duration=10.0306ms
+logger=cleanup t=2023-01-04T15:59:24.8098607+01:00 level=info msg="Completed cleanup jobs" duration=19.5008ms
+logger=licensing t=2023-01-04T15:59:24.8173649+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=licensing.renewal t=2023-01-04T15:59:24.8173649+01:00 level=warn msg="failed to load or validate token" err="license token file not found: C:\\Program Files\\GrafanaLabs\\grafana\\data\\license.jwt"
+logger=cleanup t=2023-01-04T16:09:24.8006472+01:00 level=info msg="Completed cleanup jobs" duration=10.0013ms
+logger=server t=2023-01-04T16:15:05.6665381+01:00 level=info msg="Shutdown started" reason="System signal: terminated"
+logger=ticker t=2023-01-04T16:15:05.6673144+01:00 level=info msg=stopped last_tick=2023-01-04T16:15:00+01:00
+logger=tracing t=2023-01-04T16:15:05.6673144+01:00 level=info msg="Closing tracing"
+logger=settings t=2023-01-04T16:15:32.3837161+01:00 level=info msg="Starting Grafana" version=9.3.2 commit=21c1d14e91 branch=HEAD compiled=2022-12-14T11:40:18+01:00
+logger=settings t=2023-01-04T16:15:32.3887529+01:00 level=info msg="Config loaded from" file="C:\\Program Files\\GrafanaLabs\\grafana/conf/defaults.ini"
+logger=settings t=2023-01-04T16:15:32.3887529+01:00 level=info msg="Path Home" path="C:\\Program Files\\GrafanaLabs\\grafana"
+logger=settings t=2023-01-04T16:15:32.3887529+01:00 level=info msg="Path Data" path="C:\\Program Files\\GrafanaLabs\\grafana\\data"
+logger=settings t=2023-01-04T16:15:32.3887529+01:00 level=info msg="Path Logs" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\log"
+logger=settings t=2023-01-04T16:15:32.3887529+01:00 level=info msg="Path Plugins" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=settings t=2023-01-04T16:15:32.3887529+01:00 level=info msg="Path Provisioning" path="C:\\Program Files\\GrafanaLabs\\grafana\\conf\\provisioning"
+logger=settings t=2023-01-04T16:15:32.3887529+01:00 level=info msg="App mode production"
+logger=sqlstore t=2023-01-04T16:15:32.3892494+01:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2023-01-04T16:15:32.3907494+01:00 level=warn msg="SQLite database file has broader permissions than it should" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\grafana.db" mode=-rw-rw-rw- expected=-rw-r-----
+logger=migrator t=2023-01-04T16:15:32.4642372+01:00 level=info msg="Starting DB migrations"
+logger=migrator t=2023-01-04T16:15:32.4737716+01:00 level=info msg="migrations completed" performed=0 skipped=551 duration=1.0114ms
+logger=licensing t=2023-01-04T16:15:32.4773222+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=plugin.loader t=2023-01-04T16:15:32.7735063+01:00 level=info msg="Plugin registered" pluginID=input
+logger=plugin.finder t=2023-01-04T16:15:32.7735063+01:00 level=warn msg="Skipping finding plugins as directory does not exist" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=secrets t=2023-01-04T16:15:32.7740145+01:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=query_data t=2023-01-04T16:15:32.7958329+01:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2023-01-04T16:15:32.8013353+01:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2023-01-04T16:15:33.1397904+01:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2023-01-04T16:15:33.1453011+01:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2023-01-04T16:15:33.1453011+01:00 level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2023-01-04T16:15:33.1457947+01:00 level=info msg="Warming state cache for startup"
+logger=ngalert.state.manager t=2023-01-04T16:15:33.1468103+01:00 level=info msg="State cache has been initialized" states=0 duration=1.0156ms
+logger=ticker t=2023-01-04T16:15:33.1473331+01:00 level=info msg=starting first_tick=2023-01-04T16:15:40+01:00
+logger=ngalert.multiorg.alertmanager t=2023-01-04T16:15:33.1473331+01:00 level=info msg="starting MultiOrg Alertmanager"
+logger=grafanaStorageLogger t=2023-01-04T16:15:33.1473331+01:00 level=info msg="storage starting"
+logger=report t=2023-01-04T16:15:33.1478351+01:00 level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=http.server t=2023-01-04T16:15:33.1568627+01:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=server t=2023-01-04T16:21:22.3410637+01:00 level=info msg="Shutdown started" reason="System signal: terminated"
+logger=tracing t=2023-01-04T16:21:22.3412125+01:00 level=info msg="Closing tracing"
+logger=ticker t=2023-01-04T16:21:22.3412125+01:00 level=info msg=stopped last_tick=2023-01-04T16:21:20+01:00
+logger=settings t=2023-01-04T16:21:49.8272191+01:00 level=info msg="Starting Grafana" version=9.3.2 commit=21c1d14e91 branch=HEAD compiled=2022-12-14T11:40:18+01:00
+logger=settings t=2023-01-04T16:21:49.8307343+01:00 level=info msg="Config loaded from" file="C:\\Program Files\\GrafanaLabs\\grafana/conf/defaults.ini"
+logger=settings t=2023-01-04T16:21:49.8307343+01:00 level=info msg="Path Home" path="C:\\Program Files\\GrafanaLabs\\grafana"
+logger=settings t=2023-01-04T16:21:49.8307343+01:00 level=info msg="Path Data" path="C:\\Program Files\\GrafanaLabs\\grafana\\data"
+logger=settings t=2023-01-04T16:21:49.8307343+01:00 level=info msg="Path Logs" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\log"
+logger=settings t=2023-01-04T16:21:49.8307343+01:00 level=info msg="Path Plugins" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=settings t=2023-01-04T16:21:49.8307343+01:00 level=info msg="Path Provisioning" path="C:\\Program Files\\GrafanaLabs\\grafana\\conf\\provisioning"
+logger=settings t=2023-01-04T16:21:49.8307343+01:00 level=info msg="App mode production"
+logger=sqlstore t=2023-01-04T16:21:49.8332349+01:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2023-01-04T16:21:49.8337367+01:00 level=warn msg="SQLite database file has broader permissions than it should" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\grafana.db" mode=-rw-rw-rw- expected=-rw-r-----
+logger=migrator t=2023-01-04T16:21:49.9181144+01:00 level=info msg="Starting DB migrations"
+logger=migrator t=2023-01-04T16:21:49.9286779+01:00 level=info msg="migrations completed" performed=0 skipped=551 duration=1.4915ms
+logger=licensing t=2023-01-04T16:21:49.935705+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=plugin.loader t=2023-01-04T16:21:50.2334199+01:00 level=info msg="Plugin registered" pluginID=input
+logger=plugin.finder t=2023-01-04T16:21:50.2344337+01:00 level=warn msg="Skipping finding plugins as directory does not exist" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=secrets t=2023-01-04T16:21:50.2374875+01:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=query_data t=2023-01-04T16:21:50.2711769+01:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2023-01-04T16:21:50.2908174+01:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2023-01-04T16:21:50.7611796+01:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2023-01-04T16:21:50.7662594+01:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2023-01-04T16:21:50.7662594+01:00 level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2023-01-04T16:21:50.767269+01:00 level=info msg="storage starting"
+logger=report t=2023-01-04T16:21:50.767269+01:00 level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2023-01-04T16:21:50.7667665+01:00 level=info msg="Warming state cache for startup"
+logger=http.server t=2023-01-04T16:21:50.7923404+01:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2023-01-04T16:21:50.8068403+01:00 level=info msg="State cache has been initialized" states=0 duration=40.0738ms
+logger=ticker t=2023-01-04T16:21:50.8068403+01:00 level=info msg=starting first_tick=2023-01-04T16:22:00+01:00
+logger=ngalert.multiorg.alertmanager t=2023-01-04T16:21:50.8068403+01:00 level=info msg="starting MultiOrg Alertmanager"
+logger=server t=2023-01-04T16:26:06.5897932+01:00 level=info msg="Shutdown started" reason="System signal: terminated"
+logger=tracing t=2023-01-04T16:26:06.5897932+01:00 level=info msg="Closing tracing"
+logger=ticker t=2023-01-04T16:26:06.5897932+01:00 level=info msg=stopped last_tick=2023-01-04T16:26:00+01:00
+logger=settings t=2023-01-04T16:26:31.5708647+01:00 level=info msg="Starting Grafana" version=9.3.2 commit=21c1d14e91 branch=HEAD compiled=2022-12-14T11:40:18+01:00
+logger=settings t=2023-01-04T16:26:31.5728471+01:00 level=info msg="Config loaded from" file="C:\\Program Files\\GrafanaLabs\\grafana/conf/defaults.ini"
+logger=settings t=2023-01-04T16:26:31.5728471+01:00 level=info msg="Path Home" path="C:\\Program Files\\GrafanaLabs\\grafana"
+logger=settings t=2023-01-04T16:26:31.5728471+01:00 level=info msg="Path Data" path="C:\\Program Files\\GrafanaLabs\\grafana\\data"
+logger=settings t=2023-01-04T16:26:31.5728471+01:00 level=info msg="Path Logs" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\log"
+logger=settings t=2023-01-04T16:26:31.5728471+01:00 level=info msg="Path Plugins" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=settings t=2023-01-04T16:26:31.5728471+01:00 level=info msg="Path Provisioning" path="C:\\Program Files\\GrafanaLabs\\grafana\\conf\\provisioning"
+logger=settings t=2023-01-04T16:26:31.5728471+01:00 level=info msg="App mode production"
+logger=sqlstore t=2023-01-04T16:26:31.5743472+01:00 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=sqlstore t=2023-01-04T16:26:31.5748377+01:00 level=warn msg="SQLite database file has broader permissions than it should" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\grafana.db" mode=-rw-rw-rw- expected=-rw-r-----
+logger=migrator t=2023-01-04T16:26:31.6580719+01:00 level=info msg="Starting DB migrations"
+logger=migrator t=2023-01-04T16:26:31.6675793+01:00 level=info msg="migrations completed" performed=0 skipped=551 duration=1.0167ms
+logger=licensing t=2023-01-04T16:26:31.6741619+01:00 level=info msg="Validated license token" appURL=http://localhost:3000/ source=disk status=NotFound
+logger=plugin.loader t=2023-01-04T16:26:31.9939546+01:00 level=info msg="Plugin registered" pluginID=input
+logger=plugin.finder t=2023-01-04T16:26:31.9944514+01:00 level=warn msg="Skipping finding plugins as directory does not exist" path="C:\\Program Files\\GrafanaLabs\\grafana\\data\\plugins"
+logger=secrets t=2023-01-04T16:26:31.9964797+01:00 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=query_data t=2023-01-04T16:26:32.0251596+01:00 level=info msg="Query Service initialization"
+logger=live.push_http t=2023-01-04T16:26:32.0407956+01:00 level=info msg="Live Push Gateway initialization"
+logger=infra.usagestats.collector t=2023-01-04T16:26:32.414192+01:00 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2023-01-04T16:26:32.4182128+01:00 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2023-01-04T16:26:32.4182128+01:00 level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2023-01-04T16:26:32.4192167+01:00 level=info msg="storage starting"
+logger=report t=2023-01-04T16:26:32.4197143+01:00 level=warn msg="Scheduling and sending of reports disabled, SMTP is not configured and enabled. Configure SMTP to enable."
+logger=ngalert.state.manager t=2023-01-04T16:26:32.4192167+01:00 level=info msg="Warming state cache for startup"
+logger=http.server t=2023-01-04T16:26:32.430718+01:00 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2023-01-04T16:26:32.4562696+01:00 level=info msg="State cache has been initialized" states=0 duration=37.0529ms
+logger=ngalert.multiorg.alertmanager t=2023-01-04T16:26:32.4562696+01:00 level=info msg="starting MultiOrg Alertmanager"
+logger=ticker t=2023-01-04T16:26:32.4562696+01:00 level=info msg=starting first_tick=2023-01-04T16:26:40+01:00
+logger=cleanup t=2023-01-04T16:36:32.4345459+01:00 level=info msg="Completed cleanup jobs" duration=14.1064ms
+logger=cleanup t=2023-01-04T16:46:32.4373514+01:00 level=info msg="Completed cleanup jobs" duration=17.3993ms
